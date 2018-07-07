@@ -1,10 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="row">
+        <div class="div_element">
+            <h3> Mes aliments </h3>
+            <hr ><br/>
+                <TABLE BORDER="0" class="table_foods">
+                    {% for food in foods %}
+                        <TR>
+                            <TH align="right">&emsp; &emsp; &emsp;</TH>
+                        </TR>
 
-</body>
-</html>
+                        <TR>
+                            <TH align="right">&emsp; &emsp; &emsp;</TH>
+                        </TR>
+
+                        <TR>
+                            <TH align="right">
+                        <!--<input type="image" src="{{ food.image }}">-->
+                                <p id="food_name">{{ food.name }}<p>
+
+                                {% if food.nutri_score == 'a' %}
+                                    <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+
+                                {% elif food.nutri_score == 'b' %}
+                                    <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+
+                                {% elif food.nutri_score == 'c' %}
+                                    <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+
+                                {% elif food.nutri_score == 'd' %}
+                                    <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+
+                                {% elif food.nutri_score == 'e' %}
+                                    <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+                                {% endif %}
+
+
+                                <div id="one_food_result">
+
+                                    <img src="{% static 'img/foods/' %}{{ food.image }}" class="img_food">
+
+                                    <form method="get" id="{{ food.id }}">
+                                        {% csrf_token %}
+                                        <input type="image" src="{% static 'img/delete.png' %}" class="button_delete">
+                                    </form>
+
+                                </div>
+                                <br />
+
+                                {% empty %}
+                                    <p>Vous n'avez sauvegardé aucun aliment ..</p>
+
+                                {% endfor %}
+                            </TH>
+                        </TR>
+
+                </TABLE>
+
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Générales";
+    src:url('../fonts/Générales.eot');
+    src:url('../fonts/Générales.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Générales.woff') format('woff'),
+        url('../fonts/Générales.ttf') format('truetype'),
+        url('../fonts/Générales.svg#') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.library-Générales [class^="icon-"], .library-Générales [class*="icon-"] {
+    font-family: "Générales";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+

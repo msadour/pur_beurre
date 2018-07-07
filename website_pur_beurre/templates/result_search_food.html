@@ -1,10 +1,65 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
-    <h1> Resultat </h1>
+    <h3>{{ food_substituted.name }} peux etre substitué par : </h3>
+    <hr ><br/>
 
-    {% for food in foods %}
-        <p>nom : {{ food.name }}</p>
-    {% endfor %}
+    <TABLE BORDER="0" class="table_foods">
+        <TR>
+            {% for food in foods %}
+                <TH align="right">
+                    <div id="result_for_a_food">
+                        <p id="food_name">{{ food.name }}<p>
 
+                        {% if food.nutri_score == 'a' %}
+                            <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+
+                        {% elif food.nutri_score == 'b' %}
+                            <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+
+                        {% elif food.nutri_score == 'c' %}
+                            <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+
+                        {% elif food.nutri_score == 'd' %}
+                            <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+
+                        {% elif food.nutri_score == 'e' %}
+                            <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+                        {% endif %}
+
+
+                        <div id="one_food_result">
+
+                            <form method="post" action="go_page_food/{{ food.id }}">
+                                {% csrf_token %}
+                                <input type="image" src="{% static 'img/foods/' %}{{ food.image }}" class="img_food">
+                            </form>
+                            <form method="get" id="{{ food.id }}">
+                                {% csrf_token %}
+                                <input type="image" src="{% static 'img/save.jpg' %}" class="button_save">
+                            </form>
+
+                        </div>
+                    </div>
+                </TH>
+
+                <TH> &emsp; &emsp; &emsp;</TH>
+
+                {% if food.num_food == 0  %}
+                    </TR>
+
+                    <TR> <TH> <br /><br /> </TH></TR>
+
+                    <TR>
+                {% endif %}
+
+            {% empty %}
+                <p>Aucun aliment n'est plus sain ..</p>
+
+            {% endfor %}
+        </TR>
+    </TABLE>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 {% endblock %}

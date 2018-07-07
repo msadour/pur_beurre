@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% load static %}
+<div class="row menu">
+
+    <div class="col-md-2">
+        <form action="/website_pur_beurre/home" method="post">
+            {% csrf_token %}
+            <input type="image" src="{% static 'img/logo.png' %}" class="img_menu">
+        </form>
+    </div>
+
+    <div class="col-md-2"> </div>
+    <div class="col-md-2"> </div>
+
+
+    <div class="col-md-2">
+        <form action="/website_pur_beurre/go_page_account" method="post">
+            {% csrf_token %}
+            <input type="image" src="{% static 'img/account.png' %}" class="img_menu">
+        </form>
+    </div>
+
+
+
+    <div class="col-md-2">
+        <form action="/website_pur_beurre/go_page_user_foods" method="post">
+            {% csrf_token %}
+            <input type="image" src="{% static 'img/carotte.png' %}" class="img_menu">
+        </form>
+    </div>
+
+
+    <div class="col-md-2">
+        <form action="/website_pur_beurre/logout" method="post">
+            {% csrf_token %}
+            <input type="image" src="{% static 'img/logout.png' %}" class="img_menu">
+        </form>
+    </div>
+</div>

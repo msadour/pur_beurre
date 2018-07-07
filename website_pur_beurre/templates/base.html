@@ -1,10 +1,39 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>Pur beurre</title>
+    </head>
+    <body background="{% static 'img/css/background.jpg' %}">
+
+        {% if user.is_authenticated %}
+            {% include 'menu/menu_connect.html' %}
+        {% else %}
+            {% include 'menu/menu_no_connect.html' %}
+        {% endif %}
+
+        <div class="col-sm-12 container">
+            <div id="body">
+                <br/>
+                <h1 class="paragraph_style" id="slogan"> Du gras oui, mais de qualité !</h1>
+                <br/>
+                {% block content %}
+                {% endblock %}
+            </div>
+            {% include 'footer.html' %}
+        </div>
+
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="{% static 'js/save_product.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/delete_product.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/get_page_food.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/get_all_foods.js' %}"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </body>
 </html>

@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="row">
+        <div class="div_element">
+            <h3> Compte </h3>
+            <hr width="100%" size="1">
+            <p id="user_mail">Votre adresse email actuelle est la suivante : {{ user.email }}</p>
+        </div>
+    </div>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+{% endblock %}

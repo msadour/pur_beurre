@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% load static %}
+<div class="row menu" id="header">
+
+
+    <div class="col-md-2">
+        <form action="home" method="post">
+            {% csrf_token %}
+            <input type="image" src="{% static 'img/logo.png' %}" class="img_menu">
+        </form>
+    </div>
+
+    <div class="col-md-8"></div>
+
+    <div class="col-md-2">
+        <form action="go_connexion" method="post">
+            {% csrf_token %}
+            <input type="image" src="{% static 'img/login.png' %}" class="img_menu">
+        </form>
+    </div>
+</div>

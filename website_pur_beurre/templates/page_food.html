@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="row">
+    <div class="div_element">
+
+        <h3> {{ food.name }} </h3>
+        <hr ><br/>
+
+        <div class="content_element">
+
+            <p>Nutri core :
+
+                {% if food.nutri_score == 'a' %}
+                    <img src="{% static 'img/nutriscore/a.png' %}" id="img_nutriscore_a">
+
+                {% elif food.nutri_score == 'b' %}
+                    <img src="{% static 'img/nutriscore/a.png' %}" id="img_nutriscore_b">
+
+                {% elif food.nutri_score == 'c' %}
+                    <img src="{% static 'img/nutriscore/a.png' %}" id="img_nutriscore_c">
+
+                {% elif food.nutri_score == 'd' %}
+                    <img src="{% static 'img/nutriscore/a.png' %}" id="img_nutriscore_d">
+
+                {% elif food.nutri_score == 'e' %}
+                    <img src="{% static 'img/nutriscore/a.png' %}" id="img_nutriscore_e">
+                {% endif %}
+
+
+                <form action="{{ food.web_link }}">
+                    <button type="submit"  value="Submit" id="button_web_link">Voir la fiche d'openfoodfacts</button>
+                </form>
+            </p>
+        </div>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+</div>
+{% endblock %}
