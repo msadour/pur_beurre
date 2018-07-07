@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1> Resultat </h1>
+
+    {% for food in foods %}
+        <p>nom : {{ food.name }}</p>
+    {% endfor %}
+
+{% endblock %}
