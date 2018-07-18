@@ -1,15 +1,24 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from .config import config_project
 from .forms import food_form, user_form, connexion_form
 from django.contrib.auth import authenticate, login, logout
 from .models import *
 from .function import *
-
+from django.contrib.auth.decorators import login_required
 import json
+import os
+from PIL import Image
+from io import BytesIO
+from .config import config_project
+import re
 
 
-data = {}
+data = {
+    'in_mock': config_project['in_mock'],
+    'data_header': '',
+}
 
 
 def feed_database(request):
@@ -17,9 +26,20 @@ def feed_database(request):
     return redirect('/website_pur_beurre/home')
 
 
+def load_image_foods(request):
+    load_image()
+    return redirect('/website_pur_beurre/home')
+
+
+def feed_database_by_mock(request):
+    put_food_in_db_by_mock()
+    return redirect('/website_pur_beurre/home')
+
+
 def home(request):
+    data['header'] = False
+    data['user'] = request.user
     data['food_form'] = food_form.FoodForm(request.POST)
-    data['inscription_form'] = user_form.UserForm(request.POST)
     redirect('/website_pur_beurre/home')
     return render(request, 'home.html', data)
 
@@ -29,6 +49,7 @@ def home(request):
 
 
 def go_page_connexion(request, error=False):
+    data['header'] = False
     data['connexion_form'] = connexion_form.ConnexionForm(request.POST)
     data['error'] = error
     redirect('/website_pur_beurre/home')
@@ -46,37 +67,66 @@ def connexion(request):
             if user:
                 login(request, user)
             else:
-                error = True
-
+                return go_page_connexion(request, True)
     else:
         form = connexion_form.ConnexionForm()
 
-    if error:
-        return go_page_connexion(request, True)
-    else:
-        redirect('/website_pur_beurre/home')
-        return home(request)
+    redirect('/website_pur_beurre/home')
+    return home(request)
+
+
+def go_inscription(request, errors=[]):
+    data['header'] = False
+    data['errors'] = errors
+    data['user'] = request.user
+    data['inscription_form'] = user_form.UserForm(request.POST)
+    return render(request, 'inscription.html', data)
 
 
 def inscription(request):
+    errors = []
     if request.method == "POST":
         form = user_form.UserForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data["user_name"]
             mail = form.cleaned_data["mail"]
             password = form.cleaned_data["password"]
-            check_if_mail = User.objects.filter(email=mail).count()
-            if check_if_mail == 0:
+            password_again = form.cleaned_data["password_again"]
+            check_mail = User.objects.filter(email=mail).count()
+            check_username = User.objects.filter(username=username).count()
+
+            if check_mail > 0:
+                errors.append('Email déja existant.')
+
+            if re.compile("[^@]+@[^@]+\.[^@]+").search(mail) is None:
+                errors.append("Email non valide")
+
+            if re.compile("^[A-Za-z0-9]{6,}$").search(password) is None:
+                errors.append("Le mot de passe doit contenir au moins 6 caractères")
+
+            if password != password_again:
+                errors.append('Les mots de passes ne sont pas identique.')
+
+            if check_username > 0:
+                errors.append('Nom utilisateur déja existant.')
+
+            if re.compile("^([A-Za-z1-9]{2,})$").search(password) is None:
+                errors.append("Le nom d'utilisateur doit contenir au moins 2 caractères")
+
+            if len(errors) == 0:
                 user = User.objects.create_user(username, mail, password)
                 user.save()
                 login(request, user)
                 redirect('/website_pur_beurre/home')
                 return home(request)
+            else:
+                return go_inscription(request, errors)
     redirect('/website_pur_beurre/home')
     return home(request)
 
 
 def log_out(request):
+    data['header'] = False
     logout(request)
     redirect('/website_pur_beurre/home')
     return home(request)
@@ -85,29 +135,23 @@ def log_out(request):
 # --------------------------------------------------------------------------------------------------------------------
 # --------------------------------------------------- Aliment --------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------------
-
+@csrf_exempt
 def search_food(request):
+    data['user'] = request.user
+    data['header'] = True
     if request.method == "POST":
         form = food_form.FoodForm(request.POST)
         if form.is_valid():
             food = form.cleaned_data["food"]
+            data['data_header'] = food
             data['food_substituted'] = Food.objects.get(name=food)
-            substitute_foods = search_substitue_food(food)
-            data['foods'] = []
-            num_food = 1
-            for key, food in substitute_foods.items():
-                data['foods'].append({
-                    'id': food[0],
-                    'name' : food[1],
-                    'nutri_score': food[2],
-                    'web_link': food[3],
-                    'image': adapt_name_for_path(food[1]) + '.png',
-                    'num_food': num_food % 3,
-                })
-                num_food += 1
+            substitute_foods = search_substitue_food(food, request.user.id)
+            data['foods'] = substitute_foods
+
     return render(request, 'result_search_food.html', data)
 
 
+@csrf_exempt
 def save_food(request):
     response = {'error_user_food': False}
     id_food = request.GET.get('id_food')
@@ -121,25 +165,30 @@ def save_food(request):
             response['food'] = food.name
         else:
             response['error_user_food'] = True
-    # return HttpResponse(json.dumps(response))
-    redirect('/website_pur_beurre/go_page_user_foods')
-    return go_page_user_foods(request)
+    # redirect('/website_pur_beurre/go_page_user_foods')
+    return HttpResponse(json.dumps({'food': food.name, 'food_id': food.id}))
 
 
+@login_required(login_url='go_connexion')
 def go_page_user_foods(request):
+    data['header'] = False
+    data['user'] = request.user
     data['foods'] = []
     if request.user.is_authenticated:
         user = request.user
         foods_user = FoodUser.objects.filter(user=user)
         list_foods = [ food_user.food for food_user in foods_user]
+        num_food = 1
         for food in list_foods:
             data['foods'].append({
                 'id': food.id,
                 'name': food.name,
                 'nutri_score': food.nutri_score,
                 'web_link': food.web_link,
-                'image': food.name + '.png'
+                'image': str(food.id) + '.png',
+                'num_food': num_food % 3,
             })
+            num_food += 1
     return render(request, 'my_foods.html', data)
 
 
@@ -149,11 +198,18 @@ def delete_food(request):
         user = request.user
         food_user = FoodUser.objects.filter(user=user, food=food)
         food_user.delete()
-    return HttpResponse(json.dumps({'food': food.name}))
+    return HttpResponse(json.dumps({'food': food.name, 'food_id': food.id}))
+    # return go_page_user_foods(request)
 
 
+@login_required(login_url='go_connexion')
 def go_page_food(request, id_food):
+    data['header'] = True
+    data['user'] = request.user
     data['food'] = Food.objects.get(id=id_food)
+    food = Food.objects.get(id=id_food)
+    data['data_header'] = food.name
+    data['path_image_food'] = str(id_food) + '.png'
     return render(request, 'page_food.html', data)
 
 
@@ -169,7 +225,9 @@ def get_list_foods():
 # --------------------------------------------------------------------------------------------------------------------
 # -------------------------------------------------------- Compte ----------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------------
-
+@login_required(login_url='go_connexion')
 def go_page_account(request):
+    data['header'] = True
     data['user'] = request.user
+    data['data_header'] = data['user'].username
     return render(request, 'account.html', data)

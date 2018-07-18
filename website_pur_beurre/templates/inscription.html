@@ -1,3 +1,44 @@
 {% extends 'base.html' %}
 {% block content %}
+
+    <div class="row">
+        <section id="inscription_area" class="div_element">
+            <h3> Inscription </h3>
+            <hr ><br/>
+            <ul>
+                {% for error in errors %}
+                    <li class="error_inscription">{{error}}</li>
+
+                {% empty %}
+                    <br />
+                {% endfor %}
+            </ul>
+            <!--<form action="inscription" method="post">-->
+                <!--{% csrf_token %}-->
+                <!--{{ inscription_form }}-->
+                <!--<input type="submit" value="Inscription" />-->
+            <!--</form>-->
+
+            <form action="inscription" method="post" id="connexion_form">
+                {% csrf_token %}
+                <table >
+                    {% for field in inscription_form %}
+                    <tbody>
+                    <tr>
+                      <td>
+                        <label for="{{ field.label }}" style="display:inline-block;vertical-align:middle">{{ field.label_tag }}</label>
+                      </td>
+                      <td>
+                        {{ field }}
+                      </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <input type="submit" value="Inscription" />
+            </form>
+
+        </section>
+    </div>
+
 {% endblock %}

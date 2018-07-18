@@ -10,5 +10,6 @@ config_project = {
         'result': 'RESULTAT',
         'page_food': 'PAGE DE L\'ALIMENT',
         'account': 'MON COMPTE'
-    }
+    },
+    'in_mock': False
 }

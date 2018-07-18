@@ -3,12 +3,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo_pur_beurre-favicon.png' %}" />
         <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <title>Pur beurre</title>
     </head>
-    <body background="{% static 'img/css/background.jpg' %}">
+    <body>
 
         {% if user.is_authenticated %}
             {% include 'menu/menu_connect.html' %}
@@ -16,11 +17,16 @@
             {% include 'menu/menu_no_connect.html' %}
         {% endif %}
 
-        <div class="col-sm-12 container">
-            <div id="body">
-                <br/>
-                <h1 class="paragraph_style" id="slogan"> Du gras oui, mais de qualité !</h1>
-                <br/>
+        {% if header %}
+            <div id="header">
+                <br/><br/><br/><br/>
+                <h2> {{ data_header }}</h2>
+                <br/><br/><br/><br/>
+            </div>
+        {% endif %}
+
+        <div>
+            <div id="body" class="container col-sm-12">
                 {% block content %}
                 {% endblock %}
             </div>

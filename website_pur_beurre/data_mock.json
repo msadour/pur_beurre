@@ -1,0 +1,78 @@
+{
+  "Cookies": {
+      "products":[
+          {
+              "product_name": "cookie_1",
+              "nutrition_grades": "a",
+              "url":"not url",
+              "purchase_places": "Paris",
+              "image_front_small_url": "img/cookie_mock.png",
+              "categories": ["category_cookie_1", "category_cookie_2"]
+           },
+
+           {
+             "product_name": "cookie_2",
+             "nutrition_grades": "b",
+             "url":"not url",
+             "purchase_places": "Paris",
+             "image_front_small_url": "img/cookie_mock.png",
+             "categories": ["category_cookie_1", "category_cookie_2"]
+           },
+
+           {
+             "product_name": "cookie_3",
+             "nutrition_grades": "c",
+             "url":"not url",
+             "purchase_places": "Paris",
+             "image_front_small_url": "img/cookie_mock.png",
+             "categories": ["category_cookie_1", "category_cookie_2"]
+           },
+
+           {
+             "product_name": "cookie_4",
+             "nutrition_grades": "d",
+             "url":"not url",
+             "purchase_places": "Paris",
+             "image_front_small_url": "img/cookie_mock.png",
+             "categories": ["category_cookie_1", "category_cookie_2"]
+           },
+
+           {
+             "product_name": "cookie_5",
+             "nutrition_grades": "e",
+             "url":"not url",
+             "purchase_places": "Paris",
+             "image_front_small_url": "img/cookie_mock.png",
+             "categories": ["category_cookie_1", "category_cookie_2"]
+           },
+
+           {
+             "product_name": "cookie_6",
+             "nutrition_grades": "b",
+             "url":"not url",
+             "purchase_places": "Paris",
+             "image_front_small_url": "img/cookie_mock.png",
+             "categories": ["category_cookie_1", "category_cookie_2"]
+           },
+
+           {
+             "product_name": "cookie_7",
+             "nutrition_grades": "c",
+             "url":"not url",
+             "purchase_places": "Paris",
+             "image_front_small_url": "img/cookie_mock.png",
+              "categories": ["category_cookie_1", "category_cookie_2"]
+           },
+
+           {
+             "product_name": "cookie_8",
+             "nutrition_grades": "d",
+             "url":"not url",
+             "purchase_places": "Paris",
+             "image_front_small_url": "img/cookie_mock.png",
+             "categories": ["category_cookie_1", "category_cookie_2"]
+           }
+      ]
+  }
+  
+}

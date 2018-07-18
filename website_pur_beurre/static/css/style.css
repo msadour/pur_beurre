@@ -2,16 +2,16 @@
 h1{
     color: #345A61;
     font-family: "Open Sans", sans-serif;
+    text-align: center;
 }
 
 h3{
-    color: #DE9440;
+    /*color: #DE9440;*/
     font-style: italic;
-    margin-left: 1%;
+    text-align: center;
 }
 
-p, a {
-    color: #C45525;
+p, a, h4 {
     font-family: "Scope One", sans-serif;
 }
 
@@ -19,36 +19,77 @@ hr {
     display: block;
     border: 0;
     border-top: 2px solid #345A61;
-    margin: 1em 0;
-    padding: 0;
-    width: 95%
+    width: 4%
 }
 
 #slogan {
     text-align: center;
 }
 
+
+p, h1, h3{
+    color: #345A61;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+.color_with_dark_background{
+    color: white;
+}
+
+#header{
+    background-color: #345A61;
+    margin-top: -1%;
+    margin-left: 0%;
+    width: 102%
+}
+
+
 /* ********************************************* Menu *********************************************  */
 
-.menu {
-    border:1px solid #DE9440;
-    margin-left: 0.1%;
-    background-color: #86EBE6
+
+#form_menu{
+    margin-top: 5%;
+}
+
+.input_form_search_food {
+    size: 40%,
+    color: red;
 }
 
 .img_menu{
     margin-top: 3%;
+    max-width: 20%;
+    max-height: 20%;
+    float:left;
+    margin-left: 10%
+}
 
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+.th_menu_element{
+    width : 60%;
+    height: 70%
 }
 
 /* ********************************************* Body *********************************************  */
 body{
-    width: 98.95%;
-    background: url("/static/img/background.jpg")
+    background: url("/static/img/background.png");
+    line-height: 1.5;
+    width:98%;
+
 }
 
 .div_element{
-    margin-left: 2%
+    background-color: #86EBE6;
 }
 
 
@@ -60,28 +101,60 @@ body{
 }
 
 #body{
-    width:85%;
-    margin-left:7.5%;
-    background-color: white;
-    height: 50%
+    margin-top: 5%;
+    width:102.05%;
 }
 
 
 /* ********** Home ********** */
 
+section{
+    /*padding: 8rem 0;*/
+    padding-top: 1rem;
+    padding-bottom: 15rem;
+}
 
+#search_food{
+    background-color: rgba(196, 85, 37, 0.5);
+    margin-bottom: 10%;
+    width:80%;
+    margin-left: 10%;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    border-radius: 10px;
+}
+
+#food_form{
+    margin-left: 30%;
+}
 
 #img_colette{
     float:left;
-    margin-left:5%;
+    margin-left:35%;
 }
 
 #img_remi{
     float:right;
-    margin-right:10%;
+    margin-right:35%;
+}
+
+#history{
+    background-color: #86EBE6;
+}
+
+#txt_history{
+    text-align: center
+}
+
+#contact {
+    background-color: #de9440;
 }
 
 /* ********** search food ********** */
+
+#result_search_food {
+    margin-top: -5%;
+}
 
 .img_food {
     max-width: 70%;
@@ -93,6 +166,16 @@ body{
 
 .table_foods{
     margin: 0 auto;
+}
+
+.category_search_food {
+    border-style: solid;
+    background-color: #de9440;
+    font-weight: bold;
+}
+
+.txt_category_search{
+    text-align: center;
 }
 
 #food_name{
@@ -122,26 +205,78 @@ body{
 
 /* ********** Page food ********** */
 
-.content_element{
-    margin: 0 auto;
+#food_information{
+    width: 20%;
+    margin: auto;
+}
+
+#food_information_section{
+    margin-top: -5%;
+}
+
+#button_web_link{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+#not_save_food{
+    text-align: center;
 }
 
 /* ********** User ********** */
 
+
+.error_inscription, #error_connexion {
+    color: #b30000;
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+}
+
+#connexion{
+    margin-left: 10%;
+}
+
+#connexion_form{
+    margin-left: 30%;
+}
+
+#inscription_area, #connexion_area {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 4%;
+    border-radius: 10px;
+    padding-bottom: 5rem;
+}
+
 #user_mail{
     text-align: center;
 }
+
+#account {
+    /*height: 90%;*/
+    margin-top: -6%;
+}
+
+#my_foods{
+    padding-top: 8rem;
+    margin-top: -3%;
+}
+
 /* ********************************************* footer *********************************************  */
 
 #about_me{
-    background-color: #86EBE6;
-    width: 103.2019%;
+    background-color: #345A61;
+    /*width: 103.2019%;*/
+    width: 100%;
     height: 10%;
-    margin-left: -1%;
-    border:1px solid #DE9440;
+    /*margin-left: -1%;*/
     position: fixed;
     bottom: 0;
 }
+
 
 #my_name{
     margin-top: 1%;

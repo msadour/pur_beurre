@@ -1,17 +1,49 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h1> Connexion </h1>
 
-    {% if error %}
-        <p id="error_connexion"> Login/Mot de passe incorrect</p>
-    {% endif %}
-    <form action="connexion" method="post">
-        {% csrf_token %}
-        {{ connexion_form }}
-        <input type="submit" value="Submit" />
-    </form>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="row">
+        <section class="div_element" id="connexion_area">
+            <h3> Connexion </h3>
+            <hr ><br/>
 
+            {% if error %}
+                <p id="error_connexion"> Login/Mot de passe incorrect</p>
+            {% endif %}
 
+            <form action="connexion" method="post" id="connexion_form">
+                {% csrf_token %}
+                <table >
+                    {% for field in connexion_form %}
+                    <tbody>
+                    <tr>
+                      <td>
+                        <label for="{{ field.label }}" style="display:inline-block;vertical-align:middle">{{ field.label_tag }}</label>
+                      </td>
+                      <td>
+                        {{ field }}
+                      </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <input type="submit" value="Connexion" />
+            </form>
+        </section>
+    </div>
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

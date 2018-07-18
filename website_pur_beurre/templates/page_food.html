@@ -4,39 +4,40 @@
 
 
 <div class="row">
-    <div class="div_element">
+    <section class="div_element" id="food_information_section">
 
-        <h3> {{ food.name }} </h3>
+        <h3> Aliment </h3>
         <hr ><br/>
 
-        <div class="content_element">
-
-            <p>Nutri core :
-
-                {% if food.nutri_score == 'a' %}
-                    <img src="{% static 'img/nutriscore/a.png' %}" id="img_nutriscore_a">
-
-                {% elif food.nutri_score == 'b' %}
-                    <img src="{% static 'img/nutriscore/a.png' %}" id="img_nutriscore_b">
-
-                {% elif food.nutri_score == 'c' %}
-                    <img src="{% static 'img/nutriscore/a.png' %}" id="img_nutriscore_c">
-
-                {% elif food.nutri_score == 'd' %}
-                    <img src="{% static 'img/nutriscore/a.png' %}" id="img_nutriscore_d">
-
-                {% elif food.nutri_score == 'e' %}
-                    <img src="{% static 'img/nutriscore/a.png' %}" id="img_nutriscore_e">
-                {% endif %}
+        <div id="food_information">
+            <img src="{% static 'img/foods/' %}{{ path_image_food }}" class="img_food" ><br />
 
 
+
+            {% if food.nutri_score == 'a' %}
+                <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+
+            {% elif food.nutri_score == 'b' %}
+                <img src="{% static 'img/nutriscore/b.png' %}" class="img_nutriscore">
+
+            {% elif food.nutri_score == 'c' %}
+                <img src="{% static 'img/nutriscore/c.png' %}" class="img_nutriscore">
+
+            {% elif food.nutri_score == 'd' %}
+                <img src="{% static 'img/nutriscore/d.png' %}" class="img_nutriscore">
+
+            {% elif food.nutri_score == 'e' %}
+                <img src="{% static 'img/nutriscore/e.png' %}" class="img_nutriscore">
+            {% endif %}
+
+                <br />
                 <form action="{{ food.web_link }}">
                     <button type="submit"  value="Submit" id="button_web_link">Voir la fiche d'openfoodfacts</button>
                 </form>
-            </p>
+
         </div>
 
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    </div>
+        <!--<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>-->
+    </section>
 </div>
 {% endblock %}
