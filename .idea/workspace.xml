@@ -2,47 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea2500a-44c8-4cf0-87c4-0db335b70a6f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website_pur_beurre/static/js/set_top_page_account.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website_pur_beurre/test_pur_beurre.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/background.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/logout.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/save.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ee" afterPath="$PROJECT_DIR$/website_pur_beurre/data_mock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/account.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/account.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/carotte.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/carotte.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/colette.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/colette.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/delete.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/delete.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/login.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/login.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/logo.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/logout.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/logout.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/mail.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/mail.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/nutriscore/b.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/nutriscore/b.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/nutriscore/c.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/nutriscore/c.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/nutriscore/d.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/nutriscore/d.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/phone.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/phone.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/remi.png" afterPath="$PROJECT_DIR$/website_pur_beurre/static/img/remi.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/config.py" afterPath="$PROJECT_DIR$/website_pur_beurre/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/forms/connexion_form.py" afterPath="$PROJECT_DIR$/website_pur_beurre/forms/connexion_form.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/forms/food_form.py" afterPath="$PROJECT_DIR$/website_pur_beurre/forms/food_form.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/forms/user_form.py" afterPath="$PROJECT_DIR$/website_pur_beurre/forms/user_form.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/function.py" afterPath="$PROJECT_DIR$/website_pur_beurre/function.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/css/style.css" afterPath="$PROJECT_DIR$/website_pur_beurre/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/js/get_page_food.js" afterPath="$PROJECT_DIR$/website_pur_beurre/static/js/get_page_food.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/js/save_product.js" afterPath="$PROJECT_DIR$/website_pur_beurre/static/js/save_product.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/account.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/base.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/connexion.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/connexion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/footer.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/home.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/inscription.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/inscription.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_connect.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_connect.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_no_connect.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_no_connect.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/my_foods.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/my_foods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/page_food.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/page_food.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/result_search_food.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/result_search_food.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/urls.py" afterPath="$PROJECT_DIR$/website_pur_beurre/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/views.py" afterPath="$PROJECT_DIR$/website_pur_beurre/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Procfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pur_beurre/settings.py" afterPath="$PROJECT_DIR$/pur_beurre/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,7 +22,7 @@
       <file leaf-file-name="function.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website_pur_beurre/function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="2618">
               <caret line="162" column="59" lean-forward="false" selection-start-line="162" selection-start-column="59" selection-end-line="162" selection-end-column="59" />
               <folding>
                 <element signature="e#48#63#0" expanded="true" />
@@ -82,7 +44,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="748">
               <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
               <folding />
             </state>
@@ -102,7 +64,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website_pur_beurre/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
+            <state relative-caret-position="1938">
               <caret line="128" column="26" lean-forward="false" selection-start-line="128" selection-start-column="26" selection-end-line="128" selection-end-column="26" />
               <folding />
             </state>
@@ -119,11 +81,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pur_beurre/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="70" lean-forward="true" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+              <folding>
+                <element signature="e#311#320#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -141,8 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>go_page_user_foods</find>
-      <find>clean_data</find>
       <find>'</find>
       <find>,</find>
       <find>/static/</find>
@@ -171,6 +153,8 @@
       <find>result_search_food</find>
       <find>header</find>
       <find>data['data_header'] =</find>
+      <find>pur_beurre</find>
+      <find>wsgi</find>
     </findStrings>
     <replaceStrings>
       <replace>food_id</replace>
@@ -200,7 +184,6 @@
         <option value="$PROJECT_DIR$/website_pur_beurre/forms/product_form.py" />
         <option value="$PROJECT_DIR$/pur_beurre/urls.py" />
         <option value="$PROJECT_DIR$/website_pur_beurre/forms/ConnexionForm.py" />
-        <option value="$PROJECT_DIR$/pur_beurre/settings.py" />
         <option value="$PROJECT_DIR$/website_pur_beurre/templates/menu/result_search_food.html" />
         <option value="$PROJECT_DIR$/website_pur_beurre/static/js/save_product" />
         <option value="$PROJECT_DIR$/website_pur_beurre/translate.py" />
@@ -237,6 +220,8 @@
         <option value="$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_no_connect.html" />
         <option value="$PROJECT_DIR$/website_pur_beurre/templates/result_search_food.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/pur_beurre/settings.py" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -264,6 +249,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,7 +264,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -464,10 +449,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="1" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -513,13 +498,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pur_beurre/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -580,18 +558,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/img/logout.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pur_beurre/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/img/logout.jpg" />
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/delete_product.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -670,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,7 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,9 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,9 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#form#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -706,7 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="75" lean-forward="false" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -714,7 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,7 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="44" lean-forward="true" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,13 +700,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
           <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="2618">
           <caret line="162" column="59" lean-forward="false" selection-start-line="162" selection-start-column="59" selection-end-line="162" selection-end-column="59" />
           <folding>
             <element signature="e#48#63#0" expanded="true" />
@@ -764,7 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,13 +724,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="748">
           <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
           <folding />
         </state>
@@ -804,7 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,26 +762,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
+        <state relative-caret-position="1938">
           <caret line="128" column="26" lean-forward="false" selection-start-line="128" selection-start-column="26" selection-end-line="128" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ee" />
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/result_search_food.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -844,6 +786,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pur_beurre/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="70" lean-forward="true" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+          <folding>
+            <element signature="e#311#320#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
           <folding />
         </state>
       </provider>
