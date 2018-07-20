@@ -408,3 +408,12 @@ def put_food_in_db():
                                                     cursor.execute(request_put_food_category)
                                                     connexion.commit()
 
+def delete_data_db():
+    connexion = get_connection_db()
+    cursor = connexion.cursor()
+    request_delete = "DELETE FROM website_pur_beurre_foodcategory;" \
+                     "DELETE FROM website_pur_beurre_fooduser;" \
+                     "DELETE FROM website_pur_beurre_food;" \
+                     "DELETE FROM website_pur_beurre_category;"
+    cursor.execute(request_delete)
+    connexion.commit()

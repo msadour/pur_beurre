@@ -27,6 +27,11 @@ def feed_database(request):
     return redirect('/website_pur_beurre/home')
 
 
+def delete_data_from_db(request):
+    delete_data_db()
+    return redirect('/website_pur_beurre/home')
+
+
 def load_image_foods(request):
     load_image()
     return redirect('/website_pur_beurre/home')
