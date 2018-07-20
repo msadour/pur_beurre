@@ -11,5 +11,6 @@ config_project = {
         'page_food': 'PAGE DE L\'ALIMENT',
         'account': 'MON COMPTE'
     },
-    'in_mock': False
+    'in_mock': False,
+    'website_online': True
 }

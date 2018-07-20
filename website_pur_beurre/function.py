@@ -254,6 +254,8 @@ def get_all_type_categories(in_test=False):
         categories_json = requests.get("https://fr.openfoodfacts.org/categories.json").json()
         list_categories_from_json = categories_json["tags"]
         list_type_category = []
+        if config_project['website_online']:
+            list_categories_from_json = list_categories_from_json[:300]
         for category in list_categories_from_json:
             if category["products"] > 1 and category["name"] != "":
                 type_category = decode_data(category["name"])
@@ -304,8 +306,6 @@ def put_food_in_db():
 
     for type_category in list_type_category:
 
-        # print(type_category + " - " + str(list_type_category.index(type_category) + 1) + '/' + str(len(list_type_category)))
-        # print("-------------------------------")
         cursor = connexion.cursor()
 
         type_category = type_category.lower()
@@ -317,13 +317,24 @@ def put_food_in_db():
             page_size = first_page['page_size']
             count_element = first_page['count']
             total_page = Decimal(round(count_element / page_size, 0)) + 2
-            food_category = {}
+            if config_project['website_online']:
+                total_page = 4
+                if count_element < 4:
+                    total_page = Decimal(round(count_element / page_size, 0)) + 2
 
+            food_category = {}
 
             for num_page in range(1, int(total_page)):
                 foods = requests.get(
                     'https://fr-en.openfoodfacts.org/category/'+type_category+'/' + str(num_page)+'.json').json()
-                for food in foods['products']:
+                foods_products = foods['products']
+                if config_project['website_online']:
+                    if len(foods['products']) > 5:
+                        foods_products = foods['products'][:5]
+                    else:
+                        foods_products = foods['products']
+
+                for food in foods_products:
                     # Products wihout nutrition grades not will insert in database.
                     if 'nutrition_grades' in food.keys():
                         if 'product_name_fr' not in food.keys():
