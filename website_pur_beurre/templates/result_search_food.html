@@ -3,82 +3,96 @@
 {% block content %}
 
     <div class="row">
-        <section id="result_search_food" class="div_element">
 
-            <h3>Ce produit peut être substitué par : </h3>
-            <hr ><br/>
+        {% if error_food %}
 
+            <section class="window_area div_element">
+                <h3>Produit inconnu </h3>
+                <hr ><br/>
 
-            <div>
-                {% for category, list_foods in foods.items %}
-                    <br />
-                    <div class="category_search_food">
-                        <H4 class="txt_category_search">Dans la categorie {{ category }} </H4>
-                    </div>
-                    <br />
-                        <TABLE BORDER="0" class="table_foods">
-                            <TR>
-                                {% for food in list_foods %}
-                                    <TH align="right">
-                                        <div class="result_for_a_food" id="{{ food.id  }}">
-                                            <p id="food_name">{{ food.name }}<p>
+                <p id="error_find_food">Le produit que vous cherchez n'existe pas dans notre base de données ...</p>
+            </section>
 
-                                            {% if food.nutri_score == 'a' %}
-                                                <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+        {% else %}
 
-                                            {% elif food.nutri_score == 'b' %}
-                                                <img src="{% static 'img/nutriscore/b.png' %}" class="img_nutriscore">
-
-                                            {% elif food.nutri_score == 'c' %}
-                                                <img src="{% static 'img/nutriscore/c.png' %}" class="img_nutriscore">
-
-                                            {% elif food.nutri_score == 'd' %}
-                                                <img src="{% static 'img/nutriscore/d.png' %}" class="img_nutriscore">
-
-                                            {% elif food.nutri_score == 'e' %}
-                                                <img src="{% static 'img/nutriscore/e.png' %}" class="img_nutriscore">
-                                            {% endif %}
+            <section id="result_search_food" class="div_element">
 
 
-                                            <div id="one_food_result">
-                                                <form method="post" action="go_page_food/{{ food.id }}">
-                                                    {% csrf_token %}
-                                                    {% if in_mock == True %}
-                                                        <input type="image" src="{% static '' %}{{ food.link_image }}" class="img_food">
-                                                    {% else %}
-                                                        <input type="image" src="{% static 'img/foods/' %}{{ food.image }}" class="img_food">
+                    <h3>Ce produit peut être substitué par : </h3>
+                    <hr ><br/>
+
+
+                    <div>
+                        {% for category, list_foods in foods.items %}
+                            <br />
+                            <div class="category_search_food">
+                                <H4 class="txt_category_search">Dans la categorie {{ category }} </H4>
+                            </div>
+                            <br />
+                                <TABLE BORDER="0" class="table_foods">
+                                    <TR>
+                                        {% for food in list_foods %}
+                                            <TH align="right">
+                                                <div class="result_for_a_food" id="{{ food.id  }}">
+                                                    <p id="food_name">{{ food.name }}<p>
+
+                                                    {% if food.nutri_score == 'a' %}
+                                                        <img src="{% static 'img/nutriscore/a.png' %}" class="img_nutriscore">
+
+                                                    {% elif food.nutri_score == 'b' %}
+                                                        <img src="{% static 'img/nutriscore/b.png' %}" class="img_nutriscore">
+
+                                                    {% elif food.nutri_score == 'c' %}
+                                                        <img src="{% static 'img/nutriscore/c.png' %}" class="img_nutriscore">
+
+                                                    {% elif food.nutri_score == 'd' %}
+                                                        <img src="{% static 'img/nutriscore/d.png' %}" class="img_nutriscore">
+
+                                                    {% elif food.nutri_score == 'e' %}
+                                                        <img src="{% static 'img/nutriscore/e.png' %}" class="img_nutriscore">
                                                     {% endif %}
-                                                </form>
 
-                                                <form method="get" id="{{ food.id }}">
-                                                    {% csrf_token %}
-                                                    <input type="image" src="{% static 'img/save.png' %}" class="button_save">
-                                                </form>
 
-                                            </div>
-                                        </div>
-                                    </TH>
+                                                    <div id="one_food_result">
+                                                        <form method="post" action="go_page_food/{{ food.id }}">
+                                                            {% csrf_token %}
+                                                            {% if in_mock == True %}
+                                                                <input type="image" src="{% static '' %}{{ food.link_image }}" class="img_food">
+                                                            {% else %}
+                                                                <input type="image" src="{% static 'img/foods/' %}{{ food.image }}" class="img_food">
+                                                            {% endif %}
+                                                        </form>
 
-                                    <TH> &emsp; &emsp; &emsp;</TH>
+                                                        <form method="get" id="{{ food.id }}">
+                                                            {% csrf_token %}
+                                                            <input type="image" src="{% static 'img/save.png' %}" class="button_save">
+                                                        </form>
 
-                                    {% if food.num_food == 0  %}
-                                        </TR>
+                                                    </div>
+                                                </div>
+                                            </TH>
 
-                                        <TR> <TH> <br /><br /> </TH></TR>
+                                            <TH> &emsp; &emsp; &emsp;</TH>
 
-                                        <TR>
-                                    {% endif %}
-                                {% endfor %}
-                            </TR>
-                        </TABLE>
+                                            {% if food.num_food == 0  %}
+                                                </TR>
 
-                {% empty %}
-                    <p>Aucun aliment n'est plus sain ..</p>
-                {% endfor %}
+                                                <TR> <TH> <br /><br /> </TH></TR>
 
-            </div>
+                                                <TR>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </TR>
+                                </TABLE>
 
-        </section>
+                        {% empty %}
+                            <p>Aucun aliment n'est plus sain ..</p>
+                        {% endfor %}
+
+                    </div>
+
+            </section>
+        {% endif %}
     </div>
 
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

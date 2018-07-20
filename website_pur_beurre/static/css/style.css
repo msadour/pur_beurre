@@ -152,6 +152,10 @@ section{
 
 /* ********** search food ********** */
 
+#error_find_food {
+    text-align: center;
+}
+
 #result_search_food {
     margin-top: -5%;
 }
@@ -243,7 +247,7 @@ section{
     margin-left: 30%;
 }
 
-#inscription_area, #connexion_area {
+.window_area {
     width: 60%;
     margin-left: 20%;
     margin-top: 4%;

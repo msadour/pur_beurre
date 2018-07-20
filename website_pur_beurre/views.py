@@ -139,14 +139,21 @@ def log_out(request):
 def search_food(request):
     data['user'] = request.user
     data['header'] = True
+    data['error_food'] = False
     if request.method == "POST":
         form = food_form.FoodForm(request.POST)
         if form.is_valid():
             food = form.cleaned_data["food"]
             data['data_header'] = food
-            data['food_substituted'] = Food.objects.get(name=food)
-            substitute_foods = search_substitue_food(food, request.user.id)
-            data['foods'] = substitute_foods
+            test_exist_food = Food.objects.filter(name=food).count()
+            if test_exist_food == 0:
+                data['foods'] = {}
+                data['error_food'] = True
+                data['header'] = False
+            else:
+                data['food_substituted'] = Food.objects.get(name=food)
+                substitute_foods = search_substitue_food(food, request.user.id)
+                data['foods'] = substitute_foods
 
     return render(request, 'result_search_food.html', data)
 
