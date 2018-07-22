@@ -27,7 +27,7 @@ def get_connection_db():
         password = info_db.password
         database = info_db.path[1:]
         hostname = info_db.hostname
-        connection = psycopg2.connect(
+        connexion = psycopg2.connect(
             database=database,
             user=username,
             password=password,
