@@ -22,7 +22,10 @@ data = {
 
 
 def feed_database(request):
-    put_food_in_db()
+    try:
+        put_food_in_db()
+    except:
+        pass
     load_image()
     return redirect('/website_pur_beurre/home')
 
