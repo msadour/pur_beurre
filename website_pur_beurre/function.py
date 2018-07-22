@@ -10,6 +10,7 @@ import json
 import os
 from PIL import Image
 from io import BytesIO
+from urllib.parse import urlparse
 import re
 
 
@@ -18,11 +19,26 @@ def get_connection_db():
     Get a connexion of database
     :return: connexion
     """
-    connexion = psycopg2.connect(dbname=config_project['db']['dbname'],
-                                 user=config_project['db']['user'],
-                                 host=config_project['db']['host'],
-                                 password=config_project['db']['password']
-                                 )
+    if config_project['website_online']:
+        info_db = urlparse(
+            "postgres://kfwcgmbpgmbjqd:5f1fe7a35757878232fe2f8d3c42904617590c9e7790eed29ab0569576492a88@ec2-54-228-251-254.eu-west-1.compute.amazonaws.com:5432/da4492tmntkdhv")
+
+        username = info_db.username
+        password = info_db.password
+        database = info_db.path[1:]
+        hostname = info_db.hostname
+        connection = psycopg2.connect(
+            database=database,
+            user=username,
+            password=password,
+            host=hostname
+        )
+    else:
+        connexion = psycopg2.connect(dbname=config_project['db']['dbname'],
+                                     user=config_project['db']['user'],
+                                     host=config_project['db']['host'],
+                                     password=config_project['db']['password']
+                                     )
     return connexion
 
 
