@@ -298,6 +298,7 @@ def load_image():
     query_foods = "SELECT id, link_food FROM website_pur_beurre_Food;"
     cursor.execute(query_foods)
 
+
     for food in cursor.fetchall():
         try:
             save_image(food[0], food[1])
