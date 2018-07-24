@@ -264,6 +264,7 @@ def put_food_in_db_by_mock():
 
 
 def get_all_type_categories(in_test=False):
+    print('******************* Listes des types de categories *******************')
     if in_test:
         list_type_category = ['desserts']
     else:
@@ -281,6 +282,7 @@ def get_all_type_categories(in_test=False):
                     pass
                 else:
                     list_type_category.append(type_category)
+                    print('-- ' + type_category)
 
     return list_type_category
 
@@ -298,7 +300,6 @@ def load_image():
     query_foods = "SELECT id, link_food FROM website_pur_beurre_Food;"
     cursor.execute(query_foods)
 
-
     for food in cursor.fetchall():
         try:
             save_image(food[0], food[1])
@@ -314,116 +315,126 @@ def put_food_in_db():
     :return:
     """
 
+    print('******************* Listes des aliments *******************')
+
     connexion = get_connection_db()
     in_test = False
 
-    list_food_in_db = []
     list_categories_in_db = []
     list_type_category = get_all_type_categories(in_test)
+    print('Nombre de type de categorie : ' + str(len(list_type_category)))
 
     for type_category in list_type_category:
-
-        cursor = connexion.cursor()
-
-        type_category = type_category.lower()
         try:
-            first_page = requests.get('https://fr-en.openfoodfacts.org/category/'+type_category+'/1.json').json()
+            print('-- ' + str(type_category))
+
+            cursor = connexion.cursor()
+
+            type_category = type_category.lower()
+            try:
+                first_page = requests.get('https://fr-en.openfoodfacts.org/category/'+type_category+'/1.json').json()
+            except:
+                pass
+            else:
+                page_size = first_page['page_size']
+                count_element = first_page['count']
+                total_page = Decimal(round(count_element / page_size, 0)) + 2
+                if config_project['website_online']:
+                    total_page = 4
+                    if count_element < 4:
+                        total_page = Decimal(round(count_element / page_size, 0)) + 2
+
+                food_category = {}
+
+                for num_page in range(1, int(total_page)):
+                    foods = requests.get(
+                        'https://fr-en.openfoodfacts.org/category/'+type_category+'/' + str(num_page)+'.json').json()
+                    foods_products = foods['products']
+                    if config_project['website_online']:
+                        if len(foods['products']) > 5:
+                            foods_products = foods['products'][:5]
+                        else:
+                            foods_products = foods['products']
+
+                    for food in foods_products:
+                        # Products wihout nutrition grades not will insert in database.
+                        try:
+                            if 'nutrition_grades' in food.keys():
+                                if 'product_name_fr' not in food.keys():
+                                    product_name = clean_data(food['product_name']).lower()
+                                else:
+                                    product_name = clean_data(food['product_name_fr']).lower()
+
+                                try:
+                                    print(decode_data(product_name))
+                                except UnicodeEncodeError:
+                                    pass
+                                else:
+                                    print('    * ' + product_name)
+                                    product_place = ''
+                                    if 'purchase_places' in food.keys():
+                                        product_place = clean_data(product_place)
+
+                                    check_if_food_in_db = "SELECT count(*) FROM website_pur_beurre_Food WHERE name = '" + product_name + "';"
+                                    cursor.execute(check_if_food_in_db)
+                                    food_getted = cursor.fetchone()[0]
+
+                                    if food_getted == 0:
+                                        if product_name != '':
+                                            link_food = 'http://www.idfmoteurs.com/images/pas-image-disponible.png'
+                                            if food.get('image_front_small_url'):
+                                                link_food = food['image_front_small_url']
+
+                                            request_insert = "INSERT INTO website_pur_beurre_food (name, nutri_score, web_link, place, link_food) " \
+                                                             "VALUES ('" + product_name + "', '" \
+                                                             + food['nutrition_grades'] + "', '"\
+                                                             + food['url'] + "', '" + product_place + "', '" + link_food + "');"
+                                            cursor.execute(request_insert)
+
+                                            food_category[product_name] = []
+                                            # for each product, we get all categories which product is associate
+                                            list_categories = food['categories'].split(',')
+                                            list_categories = [category.lower() for category in list_categories]
+                                            for category in list_categories:
+                                                category = clean_data(category)
+                                                if category not in list_categories_in_db:
+                                                    # We check if category is not exist for insert it
+                                                    list_categories_in_db.append(category)
+                                                    type_category = type_category.replace('\'', '')
+                                                    query_insert_category = "INSERT INTO website_pur_beurre_category (name, type_category) " \
+                                                                            "VALUES ('" + category + "', '"+type_category.lower()+"');"
+                                                    cursor.execute(query_insert_category)
+                                                food_category[product_name].append(category)
+
+                                            connexion.commit()
+
+                                            query_get_food = "SELECT id FROM website_pur_beurre_Food WHERE name = '" + product_name + "';"
+                                            cursor.execute(query_get_food)
+                                            food_id = cursor.fetchone()[0]
+                                            if food_id:
+
+                                                for category in food_category[product_name]:
+                                                    cursor.execute(
+                                                        "SELECT id FROM website_pur_beurre_Category WHERE name = '" + category.lower() + "';")
+                                                    category_id = cursor.fetchone()[0]
+                                                    if category_id:
+                                                        cursor.execute("SELECT * "
+                                                                       "FROM website_pur_beurre_FoodCategory "
+                                                                       "WHERE food_id = '" + str(food_id) + "'"
+                                                                       "AND category_id = '" + str(category_id) + "';")
+                                                        # We check if we don't have the same food associate at the same category
+                                                        if cursor.fetchone() is None:
+                                                            request_put_food_category = "INSERT INTO website_pur_beurre_FoodCategory" \
+                                                                                                                    "(food_id, category_id) " \
+                                                                                                            "VALUES (" + str(food_id) + ", " \
+                                                                                                            + str(category_id) + ");"
+                                                            cursor.execute(request_put_food_category)
+                                                            connexion.commit()
+                        except:
+                            pass
         except:
             pass
-        else:
-            page_size = first_page['page_size']
-            count_element = first_page['count']
-            total_page = Decimal(round(count_element / page_size, 0)) + 2
-            if config_project['website_online']:
-                total_page = 4
-                if count_element < 4:
-                    total_page = Decimal(round(count_element / page_size, 0)) + 2
 
-            food_category = {}
-
-            for num_page in range(1, int(total_page)):
-                foods = requests.get(
-                    'https://fr-en.openfoodfacts.org/category/'+type_category+'/' + str(num_page)+'.json').json()
-                foods_products = foods['products']
-                if config_project['website_online']:
-                    if len(foods['products']) > 5:
-                        foods_products = foods['products'][:5]
-                    else:
-                        foods_products = foods['products']
-
-                for food in foods_products:
-                    # Products wihout nutrition grades not will insert in database.
-                    if 'nutrition_grades' in food.keys():
-                        if 'product_name_fr' not in food.keys():
-                            product_name = clean_data(food['product_name']).lower()
-                        else:
-                            product_name = clean_data(food['product_name_fr']).lower()
-
-                        try:
-                            print(decode_data(product_name))
-                        except UnicodeEncodeError:
-                            pass
-                        else:
-                            product_place = ''
-                            if 'purchase_places' in food.keys():
-                                product_place = clean_data(product_place)
-
-                            check_if_food_in_db = "SELECT count(*) FROM website_pur_beurre_Food WHERE name = '" + product_name + "';"
-                            cursor.execute(check_if_food_in_db)
-                            food_getted = cursor.fetchone()[0]
-
-                            if food_getted == 0:
-                                # list_food_in_db.append(product_name)
-                                if product_name != '':
-                                    link_food = 'http://www.idfmoteurs.com/images/pas-image-disponible.png'
-                                    if food.get('image_front_small_url'):
-                                        link_food = food['image_front_small_url']
-
-                                    request_insert = "INSERT INTO website_pur_beurre_food (name, nutri_score, web_link, place, link_food) " \
-                                                     "VALUES ('" + product_name + "', '" \
-                                                     + food['nutrition_grades'] + "', '"\
-                                                     + food['url'] + "', '" + product_place + "', '" + link_food + "');"
-                                    cursor.execute(request_insert)
-
-                                    food_category[product_name] = []
-                                    # for each product, we get all categories which product is associate
-                                    list_categories = food['categories'].split(',')
-                                    list_categories = [category.lower() for category in list_categories]
-                                    for category in list_categories:
-                                        category = clean_data(category)
-                                        if category not in list_categories_in_db:
-                                            # We check if category is not exist for insert it
-                                            list_categories_in_db.append(category)
-                                            type_category = type_category.replace('\'', '')
-                                            query_insert_category = "INSERT INTO website_pur_beurre_category (name, type_category) " \
-                                                                    "VALUES ('" + category + "', '"+type_category.lower()+"');"
-                                            cursor.execute(query_insert_category)
-                                        food_category[product_name].append(category)
-
-                                    connexion.commit()
-
-                                    query_get_food = "SELECT id FROM website_pur_beurre_Food WHERE name = '" + product_name + "';"
-                                    cursor.execute(query_get_food)
-                                    food_id = cursor.fetchone()[0]
-                                    if food_id:
-
-                                        for category in food_category[product_name]:
-                                            cursor.execute(
-                                                "SELECT id FROM website_pur_beurre_Category WHERE name = '" + category.lower() + "';")
-                                            category_id = cursor.fetchone()[0]
-                                            if category_id:
-                                                cursor.execute("SELECT * "
-                                                               "FROM website_pur_beurre_FoodCategory "
-                                                               "WHERE food_id = '" + str(food_id) + "'"
-                                                               "AND category_id = '" + str(category_id) + "';")
-                                                # We check if we don't have the same food associate at the same category
-                                                if cursor.fetchone() is None:
-                                                    request_put_food_category = "INSERT INTO website_pur_beurre_FoodCategory" \
-                                                                                                            "(food_id, category_id) " \
-                                                                                                    "VALUES (" + str(food_id) + ", " \
-                                                                                                    + str(category_id) + ");"
-                                                    cursor.execute(request_put_food_category)
-                                                    connexion.commit()
 
 def delete_data_db():
     connexion = get_connection_db()
