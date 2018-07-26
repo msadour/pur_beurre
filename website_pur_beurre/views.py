@@ -22,11 +22,14 @@ data = {
 
 
 def feed_database(request):
-    try:
-        put_food_in_db()
-    except:
-        pass
-    load_image()
+    pass
+    # put_food_in_db()
+    # load_image()
+    # return redirect('/website_pur_beurre/home')
+
+
+def feed_database_heroku(request):
+    feed_db_for_heroku()
     return redirect('/website_pur_beurre/home')
 
 

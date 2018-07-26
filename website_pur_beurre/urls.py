@@ -9,6 +9,7 @@ urlpatterns = [
     path('inscription', views.inscription, name="inscription"),
     path('logout', views.log_out, name="logout"),
     path('feed_database', views.feed_database, name="feed_database"),
+    path('feed_database_heroku', views.feed_database_heroku, name="feed_database_heroku"),
     path('feed_database_by_mock', views.feed_database_by_mock, name="feed_database_by_mock"),
     path('delete_data_from_db', views.delete_data_from_db, name="delete_data_from_db"),
     path('load_image_foods', views.load_image_foods, name="load_image_foods"),

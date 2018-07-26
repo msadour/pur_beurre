@@ -264,7 +264,6 @@ def put_food_in_db_by_mock():
 
 
 def get_all_type_categories(in_test=False):
-    print('******************* Listes des types de categories *******************')
     if in_test:
         list_type_category = ['desserts']
     else:
@@ -282,7 +281,6 @@ def get_all_type_categories(in_test=False):
                     pass
                 else:
                     list_type_category.append(type_category)
-                    print('-- ' + type_category)
 
     return list_type_category
 
@@ -297,7 +295,7 @@ def load_image():
     connexion = get_connection_db()
     cursor = connexion.cursor()
 
-    query_foods = "SELECT id, link_food FROM website_pur_beurre_Food;"
+    query_foods = "SELECT id, link_food FROM website_pur_beurre_food;"
     cursor.execute(query_foods)
 
     for food in cursor.fetchall():
@@ -309,25 +307,136 @@ def load_image():
             pass
 
 
+def feed_db_for_heroku():
+    def connexion_db(type):
+        if type == 'local':
+            connexion = psycopg2.connect(dbname=config_project['db']['dbname'],
+                                         user=config_project['db']['user'],
+                                         host=config_project['db']['host'],
+                                         password=config_project['db']['password']
+                                         )
+
+        elif type == 'heroku':
+            info_db = urlparse("postgres://kfwcgmbpgmbjqd:5f1fe7a35757878232fe2f8d3c42904617590c9e7790eed29ab0569576492a88@ec2-54-228-251-254.eu-west-1.compute.amazonaws.com:5432/da4492tmntkdhv")
+            username = info_db.username
+            password = info_db.password
+            database = info_db.path[1:]
+            hostname = info_db.hostname
+            connexion = psycopg2.connect(
+                database=database,
+                user=username,
+                password=password,
+                host=hostname
+            )
+        return connexion
+
+    dict_data_for_db = {}
+    list_type_category = get_all_type_categories()
+    connexion_local = connexion_db('local')
+    cursor = connexion_local.cursor()
+
+    for type_category in list_type_category:
+        type_category = type_category.replace('\'', '').lower()
+        nb_food = 0
+        request_foods = "SELECT distinct website_pur_beurre_food.name, website_pur_beurre_food.id, website_pur_beurre_food.nutri_score, " \
+                        "website_pur_beurre_food.place, website_pur_beurre_food.link_food, website_pur_beurre_food.web_link " \
+                        "FROM website_pur_beurre_food, website_pur_beurre_foodcategory, website_pur_beurre_category " \
+                        "WHERE website_pur_beurre_food.id = website_pur_beurre_foodcategory.food_id " \
+                        "AND website_pur_beurre_category.id = website_pur_beurre_foodcategory.category_id " \
+                        "AND website_pur_beurre_category.type_category = '" + type_category + "' " \
+                        "ORDER BY website_pur_beurre_food.name;"
+        cursor.execute(request_foods)
+        for food in cursor.fetchall():
+            nb_food += 1
+            if nb_food < 16:
+                if type_category not in dict_data_for_db.keys():
+                    dict_data_for_db[type_category] = []
+
+                request_categories = "SELECT name " \
+                                     "FROM website_pur_beurre_category " \
+                                     "WHERE id IN (SELECT category_id " \
+                                                   "FROM website_pur_beurre_foodcategory " \
+                                                   "WHERE food_id = " + str(food[1]) + ");"
+                cursor.execute(request_categories)
+
+                dict_data_for_db[type_category].append({
+                    'id': food[1],
+                    'product_name': clean_data(food[0]),
+                    'nutrition_grades' : food[2],
+                    'purchase_places' : food[3],
+                    'image_front_small_url': food[4],
+                    'url': food[5],
+                    'categories': [clean_data(category[0]) for category in cursor.fetchall()]
+                })
+            else:
+                break
+
+    connexion_heroku = connexion_db('heroku')
+    cursor = connexion_heroku.cursor()
+
+    print('***************** Put datas in heroku *********************')
+
+    list_food_in_db = []
+    list_categories_in_db = []
+
+    for type_category, list_products in dict_data_for_db.items():
+        try:
+            for food in list_products:
+                if food['product_name'] not in list_food_in_db:
+                    list_food_in_db.append(food['product_name'])
+                    request_insert_food = "INSERT INTO website_pur_beurre_food (name, nutri_score, web_link, place, link_food) " \
+                                     "VALUES ('" + food['product_name'] + "', '" + food['nutrition_grades'] + "', '" + food['url'] \
+                                     + "', '" + food['purchase_places'] + "', '" + food['image_front_small_url'] + "');"
+                    cursor.execute(request_insert_food)
+                    connexion_heroku.commit()
+                    list_category = food['categories']
+                    print('---------- ' + food['product_name'] + ' ----------')
+                    # import pdb ; pdb.set_trace()
+                    for category in list_category:
+                        print('-- ' + category)
+                        if category not in list_categories_in_db:
+                            list_categories_in_db.append(category)
+                            query_insert_category = "INSERT INTO website_pur_beurre_category (name, type_category) " \
+                                                    "VALUES ('" + category + "', '" + type_category + "');"
+                            cursor.execute(query_insert_category)
+                            connexion_heroku.commit()
+
+                        query_get_food = "SELECT id FROM website_pur_beurre_Food WHERE name = '" + food['product_name'] + "';"
+                        cursor.execute(query_get_food)
+                        food_id = cursor.fetchone()[0]
+                        if food_id:
+                            cursor.execute("SELECT id FROM website_pur_beurre_Category WHERE name = '" + category + "';")
+                            for category_id in cursor.fetchall():
+                                request_put_food_category = "INSERT INTO website_pur_beurre_FoodCategory" \
+                                                            "(food_id, category_id) " \
+                                                            "VALUES (" + str(food_id) + ", " \
+                                                            + str(category_id[0]) + ");"
+                                cursor.execute(request_put_food_category)
+                                connexion_heroku.commit()
+                    connexion_heroku.commit()
+        except:
+            pass
+
+
+
 def put_food_in_db():
     """
     Get json files for put elements in database.
     :return:
     """
 
-    print('******************* Listes des aliments *******************')
+    print('**************************************')
 
     connexion = get_connection_db()
     in_test = False
 
     list_categories_in_db = []
     list_type_category = get_all_type_categories(in_test)
-    print('Nombre de type de categorie : ' + str(len(list_type_category)))
 
     for type_category in list_type_category:
+        print(type_category)
+        print('**************************************')
         try:
-            print('-- ' + str(type_category))
-
             cursor = connexion.cursor()
 
             type_category = type_category.lower()
@@ -364,13 +473,11 @@ def put_food_in_db():
                                     product_name = clean_data(food['product_name']).lower()
                                 else:
                                     product_name = clean_data(food['product_name_fr']).lower()
-
                                 try:
                                     print(decode_data(product_name))
                                 except UnicodeEncodeError:
                                     pass
                                 else:
-                                    print('    * ' + product_name)
                                     product_place = ''
                                     if 'purchase_places' in food.keys():
                                         product_place = clean_data(product_place)
