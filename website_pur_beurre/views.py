@@ -22,14 +22,18 @@ data = {
 
 
 def feed_database(request):
-    pass
-    # put_food_in_db()
-    # load_image()
-    # return redirect('/website_pur_beurre/home')
+    put_food_in_db()
+    load_image()
+    return redirect('/website_pur_beurre/home')
 
 
 def feed_database_heroku(request):
     feed_db_for_heroku()
+    return redirect('/website_pur_beurre/home')
+
+
+def feed_database_by_mock(request):
+    put_food_in_db_by_mock()
     return redirect('/website_pur_beurre/home')
 
 
@@ -40,11 +44,6 @@ def delete_data_from_db(request):
 
 def load_image_foods(request):
     load_image()
-    return redirect('/website_pur_beurre/home')
-
-
-def feed_database_by_mock(request):
-    put_food_in_db_by_mock()
     return redirect('/website_pur_beurre/home')
 
 

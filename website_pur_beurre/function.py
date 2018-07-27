@@ -1,5 +1,5 @@
 """
-Contain the class for run application.
+Contain the functions for run application.
 """
 
 import psycopg2
@@ -11,7 +11,6 @@ import os
 from PIL import Image
 from io import BytesIO
 from urllib.parse import urlparse
-import re
 
 
 def get_connection_db():
@@ -116,10 +115,6 @@ def clean_data(data):
     if data[:4] in [' it:', ' fr:', ' en:', ' es:', ' de:', ' nl:']:
         data = data[4:]
 
-    # regex = "([[a-zA-Z]{2}:){1}([a-zA-Z]*)"
-    #
-    # if re.match(regex, data):
-
     if '\'' in data:
         data = data.replace('\'', '')
     if data[:1] == ' ':
@@ -129,20 +124,13 @@ def clean_data(data):
 
 
 def decode_data(category):
+    """
+    Decode some character in category
+    :param category:
+    :return:
+    """
     category = category.replace('œ', 'oe').replace('Œ', 'Oe')
     return category
-
-
-def adapt_name_for_path(data):
-    if '/' in data:
-        data = data.replace('/', '-')
-
-    if '\\' in data:
-        data = data.replace('\\', '-')
-
-    if '*' in data:
-        data = data.replace('*', 'x')
-    return data
 
 
 def search_substitue_food(food, id_user=0):
@@ -222,14 +210,18 @@ def get_user_foods(connexion, id_user):
 
 
 def put_food_in_db_by_mock():
+    """
+    This function use a json file (data_mock.json) for feed database wihout internet.
+    :return:
+    """
     connexion = get_connection_db()
     cursor = connexion.cursor()
     current_directory = os.path.dirname(os.path.realpath(__file__))
     path_json_file = current_directory + "\\data_mock.json"
     foods = json.load(open(path_json_file))
 
-    for type_category, dict_products in foods.items():
-        for food in dict_products['products']:
+    for type_category, list_products in foods.items():
+        for food in list_products:
             request_insert = "INSERT INTO website_pur_beurre_food (name, nutri_score, web_link, place, link_food) " \
                              "VALUES ('" + food['product_name'] + "', '" + food['nutrition_grades'] + "', '" + food['url'] \
                              + "', '" + food['purchase_places'] + "', '" + food['image_front_small_url'] + "');"
@@ -264,6 +256,12 @@ def put_food_in_db_by_mock():
 
 
 def get_all_type_categories(in_test=False):
+    """
+    This function return a list with all type of category of food from openfoodfacts.
+    You can see this list by this link : https://fr.openfoodfacts.org/categories/
+    :param in_test:
+    :return:
+    """
     if in_test:
         list_type_category = ['desserts']
     else:
@@ -286,6 +284,10 @@ def get_all_type_categories(in_test=False):
 
 
 def load_image():
+    """
+    Load food's image and put them on static folder who name 'img'
+    :return:
+    """
     def save_image(id_food, link):
         image_food = Image.open(BytesIO(requests.get(link).content))
         image_food.thumbnail((128, 128), Image.ANTIALIAS)
@@ -307,7 +309,84 @@ def load_image():
             pass
 
 
+def create_json_mock():
+    """
+    DONT USE THIS FUNCTION PLEASE !
+    This function create data_mock.json for have a json file with some foods for work wihout internet
+    :return:
+    """
+    connexion_local = psycopg2.connect(dbname=config_project['db']['dbname'],
+                                     user=config_project['db']['user'],
+                                     host=config_project['db']['host'],
+                                     password=config_project['db']['password']
+                                     )
+
+    dict_data_for_db = {}
+    list_type_category = get_all_type_categories()
+    cursor = connexion_local.cursor()
+    i = 1
+    for type_category in list_type_category:
+        print(str(i) + '/' + str(len(list_type_category)) + " \n")
+        try:
+            type_category = type_category.replace('\'', '').lower()
+            nb_food = 0
+            request_foods = "SELECT distinct website_pur_beurre_food.name, website_pur_beurre_food.id, website_pur_beurre_food.nutri_score, " \
+                            "website_pur_beurre_food.place, website_pur_beurre_food.link_food, website_pur_beurre_food.web_link " \
+                            "FROM website_pur_beurre_food, website_pur_beurre_foodcategory, website_pur_beurre_category " \
+                            "WHERE website_pur_beurre_food.id = website_pur_beurre_foodcategory.food_id " \
+                            "AND website_pur_beurre_category.id = website_pur_beurre_foodcategory.category_id " \
+                            "AND website_pur_beurre_category.type_category = '" + type_category + "' " \
+                            "ORDER BY website_pur_beurre_food.name;"
+            cursor.execute(request_foods)
+            for food in cursor.fetchall():
+                nb_food += 1
+                if nb_food < 16:
+                    if type_category not in dict_data_for_db.keys():
+                        dict_data_for_db[type_category] = []
+
+                    request_categories = "SELECT name " \
+                                         "FROM website_pur_beurre_category " \
+                                         "WHERE id IN (SELECT category_id " \
+                                                       "FROM website_pur_beurre_foodcategory " \
+                                                       "WHERE food_id = " + str(food[1]) + ");"
+                    cursor.execute(request_categories)
+
+                    dict_data_for_db[type_category].append({
+                        'id': food[1],
+                        'product_name': clean_data(food[0]),
+                        'nutrition_grades' : food[2],
+                        'purchase_places' : food[3],
+                        'image_front_small_url': food[4],
+                        'url': food[5],
+                        'categories': [clean_data(category[0]) for category in cursor.fetchall()]
+                    })
+                else:
+                    break
+        except:
+            pass
+        i+=1
+
+    clean_dict_data_for_db = {}
+    for x, y in dict_data_for_db.items():
+        try:
+            print(x + ' -- ' + str(y))
+        except:
+            pass
+        else:
+            clean_dict_data_for_db[x] = y
+
+    import pdb ; pdb.set_trace()
+    json_data_for_db = json.dumps(clean_dict_data_for_db)
+    f = open("data_mock.json", "w")
+    f.write(json_data_for_db)
+    f.close()
+
+
 def feed_db_for_heroku():
+    """
+    Get json files for put elements in database of heroku.
+    :return:
+    """
     def connexion_db(type):
         if type == 'local':
             connexion = psycopg2.connect(dbname=config_project['db']['dbname'],
@@ -374,8 +453,6 @@ def feed_db_for_heroku():
     connexion_heroku = connexion_db('heroku')
     cursor = connexion_heroku.cursor()
 
-    print('***************** Put datas in heroku *********************')
-
     list_food_in_db = []
     list_categories_in_db = []
 
@@ -390,8 +467,6 @@ def feed_db_for_heroku():
                     cursor.execute(request_insert_food)
                     connexion_heroku.commit()
                     list_category = food['categories']
-                    print('---------- ' + food['product_name'] + ' ----------')
-                    # import pdb ; pdb.set_trace()
                     for category in list_category:
                         print('-- ' + category)
                         if category not in list_categories_in_db:
@@ -416,7 +491,6 @@ def feed_db_for_heroku():
                     connexion_heroku.commit()
         except:
             pass
-
 
 
 def put_food_in_db():
@@ -458,14 +532,8 @@ def put_food_in_db():
                 for num_page in range(1, int(total_page)):
                     foods = requests.get(
                         'https://fr-en.openfoodfacts.org/category/'+type_category+'/' + str(num_page)+'.json').json()
-                    foods_products = foods['products']
-                    if config_project['website_online']:
-                        if len(foods['products']) > 5:
-                            foods_products = foods['products'][:5]
-                        else:
-                            foods_products = foods['products']
 
-                    for food in foods_products:
+                    for food in foods['products']:
                         # Products wihout nutrition grades not will insert in database.
                         try:
                             if 'nutrition_grades' in food.keys():
@@ -544,6 +612,10 @@ def put_food_in_db():
 
 
 def delete_data_db():
+    """
+    Delete all data of database.
+    :return:
+    """
     connexion = get_connection_db()
     cursor = connexion.cursor()
     request_delete = "DELETE FROM website_pur_beurre_foodcategory;" \
