@@ -6,7 +6,7 @@
 ## Pré requis en local
 * Aller dans le dossier "website_pur_beurre" et editez le fichier "config.py" afin de mettre la valeur de website_online à False.
 * Pour alimenter la base de donnée (Necessite internet) ainsi que le chargement des images : lancer la commande suivante (cela peut prendre beaucoup de temps !) : http://127.0.0.1:8000/website_pur_beurre/feed_database
-* Si vous n'avez pas acces à internet, vous pouvez utiliser l'URL suivante : http://127.0.0.1:8000/website_pur_beurre/feed_database_by_mock
+* Si vous n'avez pas acces à internet, vous pouvez utiliser l'URL suivante (image pas disponible) : http://127.0.0.1:8000/website_pur_beurre/feed_database_by_mock
 
 ## Lancement
 * En local,  le programme se lance en ligne de commande à la racine du projet avec la commande suivante : "python manage.py runserver". Une fois lancé, allez sur votre navigateur et entrez l'url suivante : http://127.0.0.1:8000/website_pur_beurre/home ;
