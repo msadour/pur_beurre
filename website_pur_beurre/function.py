@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Contain the functions for run application.
 """
