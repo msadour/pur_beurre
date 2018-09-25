@@ -2,7 +2,7 @@ from . import *
 
 SECRET_KEY = '-~aO;| F;rE[??/w^zcumh(9'
 DEBUG = False
-ALLOWED_HOSTS = ['178.62.117.192']
+ALLOWED_HOSTS = ['209.97.186.43']
 
 DATABASES = {
     'default': {
