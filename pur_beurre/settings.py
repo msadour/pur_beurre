@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import django_heroku
+import raven
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,8 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'raven.contrib.django.raven_compat',
     'website_pur_beurre'
 ]
+
+RAVEN_CONFIG = {
+    'dsn': 'https://06948bfa738f454380bf4f1c70fc7033:b92347eca1a14c97b2f814733cd3b6a6@sentry.io/1263920',
+    # If you are using git, you can also automatically configure the
+    # release based on the git info.
+    'release': raven.fetch_git_sha(os.path.dirname(os.pardir)),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

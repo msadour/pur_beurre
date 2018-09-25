@@ -56,9 +56,6 @@ class TestData:
         self.information = clean_data(self.information)
         assert self.information == '-'
 
-    def test_adapt_name_for_path(self):
-        self.path = adapt_name_for_path(self.path)
-        assert self.path == "- x -"
 
     def test_get_food_with_better_score(self):
         betters_nutriscore = get_food_with_better_score(self.nutriscore)
