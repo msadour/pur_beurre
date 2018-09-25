@@ -1,7 +1,7 @@
 import pytest
 from .function import *
 import json
-import urllib.request
+from urllib2 import urlopen
 
 
 class TestDataBase:
