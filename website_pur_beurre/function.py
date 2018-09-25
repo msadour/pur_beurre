@@ -17,6 +17,8 @@ except ImportError:
      from urlparse import urlparse
 
 
+
+
 def get_connection_db():
     """
     Get a connexion of database
