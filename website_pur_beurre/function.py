@@ -11,7 +11,10 @@ import json
 import os
 from PIL import Image
 from io import BytesIO
-from urllib.parse import urlparse
+try:
+    from urllib.parse import urlparse
+except ImportError:
+     from urlparse import urlparse
 
 
 def get_connection_db():
