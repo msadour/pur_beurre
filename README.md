@@ -12,7 +12,7 @@
 * En local,  le programme se lance en ligne de commande à la racine du projet avec la commande suivante : "python manage.py runserver". Une fois lancé, allez sur votre navigateur et entrez l'url suivante : http://127.0.0.1:8000/website_pur_beurre/home ;
 * En ligne, allez sur l'adresse suivante : https://ms-purbeurre.herokuapp.com/website_pur_beurre/home
 
-## Utilisation
+## Utilisation oo
 * Une fois redirigé vers la page d'accueil il faut d'abord s'inscrire si vous n'avez pas de compte (autrement connectez vous directement) en renseignement un nom d'utilisateur, un email et un mot de passe.
 * Une fois connecté, vous pouvez rechercher des substituts d'aliment.
 * Si parmis les aliments il y en a qui vous convienne, sauvegardez les en cliquant sur l'icone representant une disquette orange.
