@@ -2,7 +2,6 @@
   "test_pur_beurre.py::TestDataBase::()::test_connexion",
   "test_pur_beurre.py::TestDataBase::()::test_insert_food",
   "test_pur_beurre.py::TestData::()::test_clean_data",
-  "test_pur_beurre.py::TestData::()::test_adapt_name_for_path",
   "test_pur_beurre.py::TestData::()::test_get_food_with_better_score",
   "test_pur_beurre.py::TestData::()::test_mock"
 ]

@@ -3,7 +3,7 @@
 
     <!--<div class="col-md-4"></div>-->
     <div class="col-md-3">
-            <form action="/website_pur_beurre/home" method="post">
+            <form action="/home" method="post">
                 {% csrf_token %}
                 <input type="image" src="{% static 'img/logo.png' %}" class="img_menu">
             </form>
@@ -23,19 +23,19 @@
 
     <div class="col-md-3">
 
-        <form action="/website_pur_beurre/go_page_account" method="post">
+        <form action="/go_page_account" method="post">
             {% csrf_token %}
             <input type="image" src="{% static 'img/account.png' %}" class="img_menu">
         </form>
 
 
-        <form action="/website_pur_beurre/go_page_user_foods" method="post">
+        <form action="/go_page_user_foods" method="post">
             {% csrf_token %}
             <input type="image" src="{% static 'img/carotte.png' %}" class="img_menu">
         </form>
 
 
-        <form action="/website_pur_beurre/logout" method="post">
+        <form action="/logout" method="post">
             {% csrf_token %}
             <input type="image" src="{% static 'img/logout.png' %}" class="img_menu">
         </form>

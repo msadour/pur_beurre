@@ -12,5 +12,7 @@ config_project = {
         'account': 'MON COMPTE'
     },
     'in_mock': False,
-    'website_online': True
+    'website_online': False,
+    'maintenance' : False
 }
+

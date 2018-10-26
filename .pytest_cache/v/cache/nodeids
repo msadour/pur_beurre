@@ -1,0 +1,6 @@
+[
+  "website_pur_beurre/test_pur_beurre.py::TestData::()::test_check_error_user",
+  "website_pur_beurre/test_pur_beurre.py::TestData::()::test_search_substitue_food",
+  "website_pur_beurre/test_pur_beurre.py::TestData::()::test_get_all_type_categories",
+  "website_pur_beurre/test_pur_beurre.py::TestData::()::test_get_food_with_better_score"
+]

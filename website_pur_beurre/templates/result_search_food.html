@@ -7,10 +7,10 @@
         {% if error_food %}
 
             <section class="window_area div_element">
-                <h3>Produit inconnu </h3>
+                <h3>Unknow product </h3>
                 <hr ><br/>
 
-                <p id="error_find_food">Le produit que vous cherchez n'existe pas dans notre base de données ...</p>
+                <p id="error_find_food">The product your are looking for does not exist in our database ...</p>
             </section>
 
         {% else %}
@@ -18,7 +18,7 @@
             <section id="result_search_food" class="div_element">
 
 
-                    <h3>Ce produit peut être substitué par : </h3>
+                    <h3>This product can be substituted by : </h3>
                     <hr ><br/>
 
 
@@ -26,7 +26,7 @@
                         {% for category, list_foods in foods.items %}
                             <br />
                             <div class="category_search_food">
-                                <H4 class="txt_category_search">Dans la categorie {{ category }} </H4>
+                                <H4 class="txt_category_search">In category {{ category }} </H4>
                             </div>
                             <br />
                                 <TABLE BORDER="0" class="table_foods">
@@ -54,7 +54,7 @@
 
 
                                                     <div id="one_food_result">
-                                                        <form method="post" action="go_page_food/{{ food.id }}">
+                                                        <form method="post" action="/go_page_food/{{ food.id }}">
                                                             {% csrf_token %}
                                                             {% if in_mock == True %}
                                                                 <input type="image" src="{% static '' %}{{ food.link_image }}" class="img_food">
@@ -86,8 +86,29 @@
                                 </TABLE>
 
                         {% empty %}
-                            <p>Aucun aliment n'est plus sain ..</p>
+                            <p>No product is healtier ...</p>
                         {% endfor %}
+
+                        <table border="0" id="list_page">
+                            <tr>
+
+                                {% for page in list_pages %}
+                                    <th class="page">
+                                        <form method="post" action="/search_food_by_page/{{ name_food }}/{{ page }}">
+                                            {% csrf_token %}
+                                            {% if page == current_num_page  %}
+                                                <input type="submit" value="{{page}}" style="height:40px; width:40px" />
+                                            {% else %}
+                                                <input type="submit" value="{{page}}" />
+                                            {% endif %}
+
+                                        </form>
+
+                                    </th>
+                                {% endfor %}
+                             </tr>
+                        </table>
+
 
                     </div>
 

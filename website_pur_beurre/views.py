@@ -13,6 +13,8 @@ from PIL import Image
 from io import BytesIO
 from .config import config_project
 import re
+import math
+import json
 
 
 data = {
@@ -20,6 +22,10 @@ data = {
     'data_header': '',
 }
 
+
+# --------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------ Database ----------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------
 
 def feed_database(request):
     put_food_in_db()
@@ -47,19 +53,25 @@ def load_image_foods(request):
     return redirect('/website_pur_beurre/home')
 
 
-def home(request):
+def home(request, message=''):
+    if config_project["maintenance"]:
+        return render(request, 'error.html', data)
     data['header'] = False
     data['user'] = request.user
     data['food_form'] = food_form.FoodForm(request.POST)
+    data['message'] = message
     redirect('/website_pur_beurre/home')
     return render(request, 'home.html', data)
 
+
 # --------------------------------------------------------------------------------------------------------------------
-# ----------------------------------------------- Gestion utilisateur ------------------------------------------------
+# ---------------------------------------------------- Users ---------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------------
 
 
 def go_page_connexion(request, error=False):
+    if config_project["maintenance"]:
+        return render(request, 'error.html', data)
     data['header'] = False
     data['connexion_form'] = connexion_form.ConnexionForm(request.POST)
     data['error'] = error
@@ -87,6 +99,8 @@ def connexion(request):
 
 
 def go_inscription(request, errors=[]):
+    if config_project["maintenance"]:
+        return render(request, 'error.html', data)
     data['header'] = False
     data['errors'] = errors
     data['user'] = request.user
@@ -103,26 +117,8 @@ def inscription(request):
             mail = form.cleaned_data["mail"]
             password = form.cleaned_data["password"]
             password_again = form.cleaned_data["password_again"]
-            check_mail = User.objects.filter(email=mail).count()
-            check_username = User.objects.filter(username=username).count()
 
-            if check_mail > 0:
-                errors.append('Email déja existant.')
-
-            if re.compile("[^@]+@[^@]+\.[^@]+").search(mail) is None:
-                errors.append("Email non valide")
-
-            if re.compile("^[A-Za-z0-9]{6,}$").search(password) is None:
-                errors.append("Le mot de passe doit contenir au moins 6 caractères")
-
-            if password != password_again:
-                errors.append('Les mots de passes ne sont pas identique.')
-
-            if check_username > 0:
-                errors.append('Nom utilisateur déja existant.')
-
-            if re.compile("^([A-Za-z1-9]{2,})$").search(password) is None:
-                errors.append("Le nom d'utilisateur doit contenir au moins 2 caractères")
+            errors = check_error_user(username, mail, password, password_again)
 
             if len(errors) == 0:
                 user = User.objects.create_user(username, mail, password)
@@ -144,10 +140,12 @@ def log_out(request):
 
 
 # --------------------------------------------------------------------------------------------------------------------
-# --------------------------------------------------- Aliment --------------------------------------------------------
+# --------------------------------------------------- Foods --------------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------------
 @csrf_exempt
-def search_food(request):
+def search_food(request, num_page=1):
+    if config_project["maintenance"]:
+        return render(request, 'error.html', data)
     data['user'] = request.user
     data['header'] = True
     data['error_food'] = False
@@ -163,9 +161,23 @@ def search_food(request):
                 data['header'] = False
             else:
                 data['food_substituted'] = Food.objects.get(name=food)
-                substitute_foods = search_substitue_food(food, request.user.id)
-                data['foods'] = substitute_foods
+                substitute_foods = search_substitue_food(food, request.user.id, num_page)
+                data['name_food'] = food
+                data['list_pages'] = substitute_foods[1]
+                data['current_num_page'] = num_page
+                data['foods'] = substitute_foods[0]
 
+    return render(request, 'result_search_food.html', data)
+
+
+def search_food_by_page(request, food_name, num_page):
+    if config_project["maintenance"]:
+        return render(request, 'error.html', data)
+    substitute_foods = search_substitue_food(food_name, request.user.id, num_page)
+    data['list_pages'] = substitute_foods[1]
+    data['current_num_page'] = num_page
+    data['foods'] = substitute_foods[0]
+    data['current_num_page'] = num_page
     return render(request, 'result_search_food.html', data)
 
 
@@ -183,12 +195,13 @@ def save_food(request):
             response['food'] = food.name
         else:
             response['error_user_food'] = True
-    # redirect('/website_pur_beurre/go_page_user_foods')
     return HttpResponse(json.dumps({'food': food.name, 'food_id': food.id}))
 
 
 @login_required(login_url='go_connexion')
 def go_page_user_foods(request):
+    if config_project["maintenance"]:
+        return render(request, 'error.html', data)
     data['header'] = False
     data['user'] = request.user
     data['foods'] = []
@@ -217,11 +230,12 @@ def delete_food(request):
         food_user = FoodUser.objects.filter(user=user, food=food)
         food_user.delete()
     return HttpResponse(json.dumps({'food': food.name, 'food_id': food.id}))
-    # return go_page_user_foods(request)
 
 
 @login_required(login_url='go_connexion')
 def go_page_food(request, id_food):
+    if config_project["maintenance"]:
+        return render(request, 'error.html', data)
     data['header'] = True
     data['user'] = request.user
     data['food'] = Food.objects.get(id=id_food)
@@ -231,21 +245,54 @@ def go_page_food(request, id_food):
     return render(request, 'page_food.html', data)
 
 
-def get_list_foods():
-    json_response = {}
-    list_foods = [food for food in Food.objects.all()]
-    for food in list_foods:
-        json_response['name'] = food.name
-        json_response['nutri_score'] = food.nutri_score
-    return HttpResponse(json.dumps(json_response))
+def get_list_foods(request):
+    food_search = request.GET.get('food_search', None)
+    list_foods = [food.name for food in Food.objects.filter(name__contains=food_search)] #string__contains=
+
+    return HttpResponse(json.dumps({'foods' : list_foods}))
 
 
 # --------------------------------------------------------------------------------------------------------------------
-# -------------------------------------------------------- Compte ----------------------------------------------------
+# -------------------------------------------------------- Account ----------------------------------------------------
 # --------------------------------------------------------------------------------------------------------------------
 @login_required(login_url='go_connexion')
-def go_page_account(request):
-    data['header'] = True
+def go_page_account(request, errors=[]):
+    if config_project["maintenance"]:
+        return render(request, 'error.html', data)
     data['user'] = request.user
-    data['data_header'] = data['user'].username
+    data['errors'] = errors
+    data['update_form'] = user_form.UserUpdateForm(request.user)
     return render(request, 'account.html', data)
+
+
+def update_account(request):
+    errors = []
+    user = request.user
+    if request.method == "POST":
+        form = user_form.UserForm(request.POST)
+        if form.is_valid():
+            new_username = form.cleaned_data["user_name"]
+            new_mail = form.cleaned_data["mail"]
+            new_password = form.cleaned_data["password"]
+            new_password_again = form.cleaned_data["password_again"]
+
+            errors = check_error_user(new_username, new_mail, new_password, new_password_again)
+
+            if len(errors) == 0:
+                if new_username != '':
+                    user.username=new_username
+
+                if new_mail != '':
+                    user.email = new_mail
+
+                if new_password != '':
+                    user.password = new_password
+
+                user.save()
+                redirect('/website_pur_beurre/home')
+                return home(request)
+            else:
+                return go_page_account(request, errors)
+    redirect('/website_pur_beurre/home')
+    return home(request)
+

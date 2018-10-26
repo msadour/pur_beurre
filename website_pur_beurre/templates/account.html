@@ -2,11 +2,46 @@
 {% block content %}
 
     <div class="row">
-        <section class="div_element" id="account">
-            <h3> Compte </h3>
+        <section class="div_element window_area" id="account">
+            <h3> Account </h3>
             <hr width="100%" size="1"><br/>
-            <p id="user_mail">Votre adresse email actuelle est la suivante : {{ user.email }}</p>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <!--<p id="user_mail">You email is : {{ user.email }}</p>-->
+
+
+            <ul>
+                {% for error in errors %}
+                    <li class="error_inscription">{{error}}</li>
+
+                {% empty %}
+                    <br />
+                {% endfor %}
+            </ul>
+            <!--<form action="inscription" method="post">-->
+                <!--{% csrf_token %}-->
+                <!--{{ inscription_form }}-->
+                <!--<input type="submit" value="Inscription" />-->
+            <!--</form>-->
+
+            <form action="update_account" method="post" id="update_form">
+                {% csrf_token %}
+                <table >
+                    {% for field in update_form %}
+                    <tbody>
+                    <tr>
+                      <td>
+                        <label for="{{ field.label }}" style="display:inline-block;vertical-align:middle">{{ field.label_tag }}</label>
+                      </td>
+                      <td>
+                        {{ field }}
+                      </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <input type="submit" value="Update" />
+            </form>
+
+
         </section>
     </div>
 

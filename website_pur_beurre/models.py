@@ -9,6 +9,9 @@ class Food(models.Model):
     place = models.CharField(max_length=300)
     link_food = models.CharField(max_length=300, null=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Category(models.Model):
     name = models.CharField(max_length=300)

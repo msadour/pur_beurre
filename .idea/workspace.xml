@@ -2,11 +2,568 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea2500a-44c8-4cf0-87c4-0db335b70a6f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/tests.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website_pur_beurre/constante.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website_pur_beurre/decorator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website_pur_beurre/forms/food_form_menu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/error.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4560.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4561.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4562.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4563.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4564.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4565.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4566.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4567.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4568.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4569.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4570.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4571.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4572.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4573.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4574.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4575.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4576.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4577.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4578.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4579.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4580.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4581.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4582.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4583.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4584.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4585.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4586.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4587.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4588.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4589.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4590.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4591.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4592.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4593.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4594.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4595.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4596.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4597.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4598.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4599.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4600.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4601.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4602.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4603.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4604.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4605.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4606.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4607.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4608.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4609.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4610.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4611.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4612.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4613.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4614.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4615.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4616.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4617.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4618.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4619.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4620.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4621.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4622.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4623.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4624.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4625.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4626.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4627.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4628.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4629.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4630.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4631.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4632.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4633.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4634.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4635.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4636.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4637.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4638.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4639.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4640.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4641.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4642.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4643.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4644.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4645.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4646.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4647.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4648.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4649.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4650.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4651.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4652.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4653.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4654.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4655.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4656.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4657.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4658.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4659.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4660.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4661.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4662.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4663.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4664.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4665.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4666.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4667.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4668.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4669.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4670.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4671.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4672.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4673.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4674.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4675.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4676.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4677.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4678.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4679.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4680.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4681.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4682.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4683.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4684.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4685.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4686.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4687.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4688.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4689.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4690.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4691.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4692.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4693.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4694.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4695.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4696.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4697.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4698.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4699.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4700.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4701.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4702.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4703.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4704.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4705.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4706.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4707.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4708.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4709.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4710.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4711.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4712.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4713.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4714.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4715.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4716.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4717.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4718.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4719.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4720.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4721.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4722.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4723.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4724.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4725.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4726.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4727.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4728.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4729.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4730.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4731.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4732.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4733.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4734.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4735.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4736.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4737.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4738.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4739.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4740.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4741.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4742.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4743.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4744.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4745.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4746.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4747.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4748.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4749.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4750.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4751.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4752.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4753.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4754.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4755.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4756.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4757.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4758.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4759.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4760.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4761.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4762.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4763.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4764.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4765.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4766.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4767.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4768.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4769.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4770.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4771.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4772.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4773.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4774.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4775.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4776.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4777.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4778.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4779.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4780.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4781.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4782.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4783.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4784.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4785.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4786.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4787.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4788.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4789.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4790.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4791.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4792.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4793.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4794.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4795.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4796.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4797.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4798.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4799.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4800.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4801.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4802.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4803.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4804.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4805.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4806.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4807.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4808.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4809.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4810.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4811.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4812.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4813.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4814.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4815.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4816.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4817.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4818.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4819.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4820.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4821.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4822.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4823.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4824.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4825.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4826.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4827.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4828.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4829.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4830.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4831.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4832.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4833.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4834.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4835.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4836.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4837.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4838.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4839.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4840.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4841.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4842.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4843.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4844.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4845.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4846.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4847.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4848.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4849.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4850.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4851.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4852.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4853.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4854.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4855.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4856.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4857.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4858.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4859.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4860.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4861.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4862.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4863.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4864.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4865.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4866.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4867.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4868.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4869.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4870.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4871.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4872.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4873.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4874.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4875.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4876.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4877.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4878.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4879.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4880.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4881.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4882.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4883.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4884.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4885.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4886.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4887.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4888.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4889.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4890.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4891.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4892.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4893.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4894.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4895.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4896.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4897.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4898.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4899.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4900.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4901.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4902.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4903.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4904.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4905.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4906.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4907.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4908.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4909.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4910.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4911.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4912.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4913.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4914.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4915.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4916.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4917.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4918.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4919.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4920.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4921.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4922.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4923.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4924.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4925.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4926.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4927.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4928.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4929.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4930.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4931.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4932.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4933.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4934.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4935.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4936.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4937.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4938.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4939.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4940.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4941.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4942.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4943.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4944.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4945.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4946.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4947.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4948.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4949.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4950.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4951.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4952.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4953.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4954.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4955.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4956.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4957.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4958.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4959.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4960.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4961.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4962.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4963.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4964.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4965.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4966.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4967.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4968.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4969.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4970.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4971.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4972.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4973.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4974.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4975.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4976.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4977.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4978.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4979.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4980.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4981.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4982.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4983.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4984.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4985.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4986.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4987.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4988.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4989.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4990.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4991.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4992.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4993.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4994.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4995.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4996.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4997.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4998.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/4999.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5000.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5001.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5002.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5003.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5004.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5005.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5006.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5007.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5008.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5009.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5010.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5011.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5012.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5013.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5014.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5015.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5016.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5017.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5018.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5019.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5020.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5021.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5022.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5023.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5024.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5025.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5026.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5027.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5028.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5029.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5030.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5031.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5032.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5033.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5034.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5035.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5036.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5037.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5038.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5039.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5040.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5041.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5042.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5043.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5044.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5045.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5046.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5047.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5048.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5049.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5050.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5051.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5052.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5053.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5054.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5055.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5056.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5057.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5058.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5059.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5060.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5061.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5062.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5063.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5064.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5065.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5066.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5067.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5068.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5069.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5070.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5071.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5072.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5073.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5074.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5075.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5076.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5077.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5078.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5079.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5080.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5081.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5082.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5083.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5084.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5085.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5086.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5087.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5088.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5089.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5090.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5091.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/website_pur_beurre/static/img/foods/5092.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/data_mock.json" afterPath="$PROJECT_DIR$/website_pur_beurre/data_mock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pur_beurre/settings.py" afterPath="$PROJECT_DIR$/pur_beurre/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pur_beurre/urls.py" afterPath="$PROJECT_DIR$/pur_beurre/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/.pytest_cache/v/cache/nodeids" afterPath="$PROJECT_DIR$/website_pur_beurre/.pytest_cache/v/cache/nodeids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/config.py" afterPath="$PROJECT_DIR$/website_pur_beurre/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/forms/connexion_form.py" afterPath="$PROJECT_DIR$/website_pur_beurre/forms/connexion_form.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/forms/food_form.py" afterPath="$PROJECT_DIR$/website_pur_beurre/forms/food_form.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/forms/user_form.py" afterPath="$PROJECT_DIR$/website_pur_beurre/forms/user_form.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/function.py" afterPath="$PROJECT_DIR$/website_pur_beurre/function.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/models.py" afterPath="$PROJECT_DIR$/website_pur_beurre/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/css/style.css" afterPath="$PROJECT_DIR$/website_pur_beurre/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/js/delete_product.js" afterPath="$PROJECT_DIR$/website_pur_beurre/static/js/delete_product.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/js/get_all_foods.js" afterPath="$PROJECT_DIR$/website_pur_beurre/static/js/get_all_foods.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/static/js/save_product.js" afterPath="$PROJECT_DIR$/website_pur_beurre/static/js/save_product.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/account.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/base.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/connexion.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/connexion.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/home.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/inscription.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/inscription.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_connect.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_connect.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/my_foods.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/my_foods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/page_food.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/page_food.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/templates/result_search_food.html" afterPath="$PROJECT_DIR$/website_pur_beurre/templates/result_search_food.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/test_pur_beurre.py" afterPath="$PROJECT_DIR$/website_pur_beurre/test_pur_beurre.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/urls.py" afterPath="$PROJECT_DIR$/website_pur_beurre/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website_pur_beurre/views.py" afterPath="$PROJECT_DIR$/website_pur_beurre/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +579,33 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="account.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/account.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="60" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website_pur_beurre/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="22" />
+            <state relative-caret-position="3434">
+              <caret line="218" column="39" lean-forward="false" selection-start-line="218" selection-start-column="39" selection-end-line="218" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_pur_beurre.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website_pur_beurre/test_pur_beurre.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="72" lean-forward="false" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -35,33 +614,8 @@
       <file leaf-file-name="function.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website_pur_beurre/function.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="615" column="32" lean-forward="false" selection-start-line="615" selection-start-column="32" selection-end-line="615" selection-end-column="32" />
-              <folding>
-                <element signature="e#52#67#0" expanded="true" />
-                <element signature="e#1322#2056#0" expanded="false" />
-                <element signature="e#2106#2464#0" expanded="false" />
-                <element signature="e#2554#3289#0" expanded="false" />
-                <element signature="e#3318#3801#0" expanded="false" />
-                <element signature="e#3835#4000#0" expanded="false" />
-                <element signature="e#4051#6772#0" expanded="false" />
-                <element signature="e#6819#7696#0" expanded="false" />
-                <element signature="e#7733#10161#0" expanded="false" />
-                <element signature="e#10212#11220#0" expanded="false" />
-                <element signature="e#11245#12074#0" expanded="false" />
-                <element signature="e#12105#15457#0" expanded="false" />
-                <element signature="e#15490#21395#0" expanded="false" />
-                <element signature="e#21424#28759#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website_pur_beurre/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+            <state relative-caret-position="1020">
+              <caret line="72" column="71" lean-forward="false" selection-start-line="72" selection-start-column="71" selection-end-line="72" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -70,28 +624,18 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pur_beurre/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+            <state relative-caret-position="459">
+              <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="48" lean-forward="false" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website_pur_beurre/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,36 +653,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>{</find>
-      <find>table</find>
-      <find>'name'</find>
-      <find>.lower()</find>
-      <find>content_element</find>
-      <find>content_elementfood_information</find>
-      <find>decode_type_category</find>
-      <find>bold</find>
-      <find>inscr</find>
-      <find>border-r</find>
-      <find>search_food</find>
-      <find>#search_food</find>
-      <find>div_element</find>
-      <find>history</find>
-      <find>#account</find>
-      <find>food_information</find>
-      <find>result_search_food</find>
-      <find>header</find>
-      <find>data['data_header'] =</find>
-      <find>pur_beurre</find>
-      <find>wsgi</find>
-      <find>connexion_area</find>
-      <find>config_project</find>
-      <find>get_connection_db</find>
-      <find>print</find>
-      <find>adapt_name_for_path</find>
+      <find>'https://fr-en.openfoodfacts.org/category/'</find>
+      <find>'http://www.idfmoteurs.com/images/pas-image-disponible.png'</find>
+      <find>SELECT id, link_food FROM website_pur_beurre_food</find>
+      <find>website_pur_beurre_FoodCategory.food_id</find>
+      <find>website_pur_beurre_Food.id</find>
+      <find>website_pur_beurre_Food</find>
+      <find>website_pur_beurre_Food.name</find>
+      <find>website_pur_beurre_Food.nutri_score</find>
+      <find>website_pur_beurre_food.place</find>
+      <find>website_pur_beurre_food.link_food</find>
+      <find>website_pur_beurre_food.web_link</find>
+      <find>website_pur_beurre_foodcategory</find>
+      <find>website_pur_beurre_food</find>
+      <find>website_pur_beurre_category.id</find>
+      <find>website_pur_beurre_category.type_category</find>
+      <find>website_pur_beurre_category.name</find>
+      <find>website_pur_beurre_</find>
+      <find>website_pur_beurre_category</find>
+      <find>TABLE_FOOD + &quot;User.food_id</find>
+      <find>&quot; + TABLE_FOOD + &quot;User.id_user</find>
+      <find>TABLE_FOOD + &quot;user</find>
+      <find>TABLE_FOOD + &quot;User</find>
+      <find>get_list_foods</find>
+      <find>request.user</find>
+      <find>account</find>
       <find>make_dict_element</find>
-      <find>data</find>
-      <find>sort_dict</find>
-      <find>feed_database_heroku</find>
+      <find>search_substitue_food</find>
+      <find>User</find>
+      <find>User.</find>
+      <find>error</find>
     </findStrings>
     <replaceStrings>
       <replace>food_id</replace>
@@ -146,6 +690,22 @@
       <replace>git add</replace>
       <replace>&quot;</replace>
       <replace>:</replace>
+      <replace>&quot; +</replace>
+      <replace>&quot; + FOOD_CATEGORY_FOOD_ID + &quot;</replace>
+      <replace>&quot; + FOOD_ID + &quot;</replace>
+      <replace>&quot; + FOOD_NAME + &quot;</replace>
+      <replace>&quot; + FOOD_NUTRISCORE + &quot;</replace>
+      <replace>&quot; + FOOD_PLACE + &quot;</replace>
+      <replace>&quot; + FOOD_LINKFOOD + &quot;</replace>
+      <replace>&quot; + FOOD_WEBLINK + &quot;</replace>
+      <replace>&quot; + TABLE_FOOD_CATEGORY + &quot;</replace>
+      <replace>&quot; + TABLE_FOOD + &quot;</replace>
+      <replace>&quot; + CATEGORY_ID + &quot;</replace>
+      <replace>&quot; + CATEGORY_TYPE + &quot;</replace>
+      <replace>&quot; + CATEGORY_NAME + &quot;</replace>
+      <replace>&quot; + TABLE_CATEGORY + &quot;</replace>
+      <replace>&quot; + TABLE_FOOD_USER_FOOD_ID + &quot;</replace>
+      <replace>&quot; + TABLE_FOOD_USER_USER_ID + &quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -160,55 +720,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/index.html" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/result.html" />
         <option value="$PROJECT_DIR$/website_pur_beurre/templates/food.html" />
         <option value="$PROJECT_DIR$/website_pur_beurre/static/css/style" />
         <option value="$PROJECT_DIR$/website_pur_beurre/form/product_form.py" />
         <option value="$PROJECT_DIR$/website_pur_beurre/forms/product_form.py" />
-        <option value="$PROJECT_DIR$/pur_beurre/urls.py" />
         <option value="$PROJECT_DIR$/website_pur_beurre/forms/ConnexionForm.py" />
         <option value="$PROJECT_DIR$/website_pur_beurre/templates/menu/result_search_food.html" />
         <option value="$PROJECT_DIR$/website_pur_beurre/static/js/save_product" />
         <option value="$PROJECT_DIR$/website_pur_beurre/translate.py" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/models.py" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/static/js/get_all_foods.js" />
         <option value="$PROJECT_DIR$/../../../exercice/le_monde_est_petit/test_world.py" />
         <option value="$PROJECT_DIR$/../../../exercice/le_monde_est_petit/program/world.py" />
         <option value="$PROJECT_DIR$/../../../exercice/le_monde_est_petit/program/download_agents.py" />
         <option value="$PROJECT_DIR$/../../../exercice/le_monde_est_petit/test_download_agents.py" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/static/js/delete_product.js" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/static/js/save_product.js" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/test_pur_beurre.py" />
         <option value="$PROJECT_DIR$/website_pur_beurre/templates/footer.html" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/forms/food_form.py" />
         <option value="$PROJECT_DIR$/ee" />
         <option value="$PROJECT_DIR$/website_pur_beurre/static/js/get_page_food.js" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/forms/user_form.py" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/forms/connexion_form.py" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_connect.html" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/my_foods.html" />
         <option value="$PROJECT_DIR$/website_pur_beurre/static/js/set_top_page_account.js" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/account.html" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/page_food.html" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/home.html" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/base.html" />
         <option value="$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_no_connect.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/pur_beurre/settings.py" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/static/css/style.css" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/inscription.html" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/connexion.html" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/templates/result_search_food.html" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/config.py" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/urls.py" />
         <option value="$PROJECT_DIR$/website_pur_beurre/data_mock.json" />
         <option value="$PROJECT_DIR$/data_mock.txt" />
         <option value="$PROJECT_DIR$/data_mock.json" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/views.py" />
-        <option value="$PROJECT_DIR$/website_pur_beurre/function.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/static/js/save_product.js" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/static/js/delete_product.js" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/models.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/constante.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/templates/result_search_food.html" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/templates/page_food.html" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/templates/my_foods.html" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/templates/inscription.html" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/templates/connexion.html" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/forms/connexion_form.py" />
+        <option value="$PROJECT_DIR$/pur_beurre/urls.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/decorator.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/templates/error.html" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/forms/food_form_menu.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/templates/home.html" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/templates/base.html" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/static/js/get_all_foods.js" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_connect.html" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/urls.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/forms/food_form.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/forms/user_form.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/templates/account.html" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/static/css/style.css" />
+        <option value="$PROJECT_DIR$/pur_beurre/settings.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/function.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/test_pur_beurre.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/views.py" />
+        <option value="$PROJECT_DIR$/website_pur_beurre/config.py" />
       </list>
     </option>
   </component>
@@ -237,7 +799,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -264,12 +825,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur_beurre" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur_beurre" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pur_beurre" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../exercice/le_monde_est_petit/test_download_agents.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../P13/muscunivers_project" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="353" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
@@ -289,16 +865,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\pc\Documents\informatique\openclassroom\Parcours_developpeur_application_python\P8\pur_beurre\website_pur_beurre\templates" />
-      <recent name="C:\Users\pc\Documents\informatique\openclassroom\Parcours_developpeur_application_python\P8\pur_beurre\website_pur_beurre\static" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\pc\Documents\informatique\openclassroom\Parcours_developpeur_application_python\P8\pur_beurre\website_pur_beurre" />
       <recent name="C:\Users\pc\Documents\informatique\openclassroom\Parcours_developpeur_application_python\P8\pur_beurre\website_pur_beurre\static\img\foods" />
       <recent name="C:\Users\pc\Documents\informatique\openclassroom\Parcours_developpeur_application_python\P8\pur_beurre\website_pur_beurre\static" />
       <recent name="C:\Users\pc\Documents\informatique\openclassroom\Parcours_developpeur_application_python\P8\pur_beurre\website_pur_beurre\static\img" />
       <recent name="C:\Users\pc\Documents\informatique\openclassroom\Parcours_developpeur_application_python\P8\pur_beurre\website_pur_beurre\static\bootstrap" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pc\Documents\informatique\openclassroom\Parcours_developpeur_application_python\P8\pur_beurre\website_pur_beurre\templates" />
+      <recent name="C:\Users\pc\Documents\informatique\openclassroom\Parcours_developpeur_application_python\P8\pur_beurre\website_pur_beurre\static" />
     </key>
   </component>
   <component name="RunManager">
@@ -454,7 +1030,7 @@
     <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2048611" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -497,40 +1073,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/result.html" />
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/loader_contain.js" />
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/get_all_foods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/img/kawin-harasai-69778-unsplash.jpg" />
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/img/login.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/translate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../exercice/le_monde_est_petit/program/world.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2050">
@@ -546,13 +1093,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/img/logout.jpg" />
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/delete_product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../exercice/le_monde_est_petit/test_world.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -591,84 +1131,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/get_page_food.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/img/foods/75237.png" />
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/forms/user_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/forms/food_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/forms/connexion_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/save_product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/set_top_page_account.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="44" lean-forward="true" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/my_foods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/account.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/page_food.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/test_pur_beurre.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_connect.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_no_connect.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -684,20 +1147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -705,141 +1154,253 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/data_mock.txt" />
+    <entry file="file://$PROJECT_DIR$/data_mock.txt" />
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/data_mock.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="249" column="12" lean-forward="false" selection-start-line="249" selection-start-column="12" selection-end-line="249" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/connexion.html">
+    <entry file="file://$PROJECT_DIR$/data_mock.json" />
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/tests.py" />
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/apps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/inscription.html">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/set_top_page_account.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        <state relative-caret-position="0">
+          <caret line="0" column="44" lean-forward="true" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/get_page_food.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/save_product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/delete_product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/result_search_food.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        <state relative-caret-position="1496">
+          <caret line="88" column="57" lean-forward="false" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pur_beurre/settings.py">
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/page_food.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="51" lean-forward="false" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/my_foods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="61" column="8" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="63" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pur_beurre/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/decorator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/error.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
-          <folding />
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/data_mock.txt">
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/forms/connexion_form.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_mock.txt">
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/forms/food_form_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="9" column="89" lean-forward="false" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/data_mock.json">
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/js/get_all_foods.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_mock.json">
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/constante.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="0" column="4139" lean-forward="true" selection-start-line="0" selection-start-column="4139" selection-end-line="0" selection-end-column="4139" />
-          <folding />
+        <state relative-caret-position="612">
+          <caret line="35" column="78" lean-forward="true" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/menu/menu_connect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="510">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/views.py">
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/inscription.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website_pur_beurre/config.py">
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/forms/food_form.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="114" column="14" lean-forward="true" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/forms/user_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/connexion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="282" column="19" lean-forward="false" selection-start-line="282" selection-start-column="19" selection-end-line="282" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/test_pur_beurre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="72" lean-forward="false" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/templates/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="60" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pur_beurre/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website_pur_beurre/function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="615" column="32" lean-forward="false" selection-start-line="615" selection-start-column="32" selection-end-line="615" selection-end-column="32" />
+        <state relative-caret-position="1020">
+          <caret line="72" column="71" lean-forward="false" selection-start-line="72" selection-start-column="71" selection-end-line="72" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3434">
+          <caret line="218" column="39" lean-forward="false" selection-start-line="218" selection-start-column="39" selection-end-line="218" selection-end-column="39" />
           <folding>
-            <element signature="e#52#67#0" expanded="true" />
-            <element signature="e#1322#2056#0" expanded="false" />
-            <element signature="e#2106#2464#0" expanded="false" />
-            <element signature="e#2554#3289#0" expanded="false" />
-            <element signature="e#3318#3801#0" expanded="false" />
-            <element signature="e#3835#4000#0" expanded="false" />
-            <element signature="e#4051#6772#0" expanded="false" />
-            <element signature="e#6819#7696#0" expanded="false" />
-            <element signature="e#7733#10161#0" expanded="false" />
-            <element signature="e#10212#11220#0" expanded="false" />
-            <element signature="e#11245#12074#0" expanded="false" />
-            <element signature="e#12105#15457#0" expanded="false" />
-            <element signature="e#15490#21395#0" expanded="false" />
-            <element signature="e#21424#28759#0" expanded="false" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/website_pur_beurre/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="48" lean-forward="false" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

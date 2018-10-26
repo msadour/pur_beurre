@@ -5,13 +5,13 @@
     <div class="row">
         {% if user.is_authenticated %}
             <div id="search_food" class="div_element">
-                <h1 class="paragraph_style color_with_dark_background" id="slogan"> Du gras oui, mais de qualité !</h1>
-                <h3 class="color_with_dark_background"> Trouvez un aliment de subsitution pour ceux que vous consommez tous les jours : </h3>
+                <h1 class="paragraph_style color_with_dark_background" id="slogan"> Fat yes, but of high quality !</h1>
+                <h3 class="color_with_dark_background"> Find a substitute food for those you eat every day : </h3>
                 <br/>
-                <form action="search_food" method="post" class="form-inline" id="food_form"><!-- class="form-inline pull-left form-group"-->
+                <form action="search_food/1" method="post" class="form-inline ui-widget" id="food_form"><!-- class="form-inline pull-left form-group"-->
                     {% csrf_token %}
                     {{ food_form }}
-                    <input type="submit" value="Chercher" id="input_search_food" class="input-sm form-control" />
+                    <input type="submit" value="Search" class="input-sm form-control" />
                 </form>
             </div>
 
@@ -21,17 +21,17 @@
     <div class="row">
         <section id="history" class="div_element">
             <br/>
-            <h3 class="color_text_dark">Colette et Remy</h3>
+            <h3 class="color_text_dark">Colette and Remy</h3>
             <hr ><br/>
 
             <div>
                 <p class="color_text_dark" id="txt_history">
 
-                Nous sommes une jeune startup fondée par Remy et Colette Tatou, deux restaurateurs de renom. Notre restaurant, <br />
-                situé à Montmartre (Paris), compte une cinquantaine de couverts et ne désemplit pas. Notre spécialité, <br />
-                la ratatouille, nous attire une clientèle internationale charmée par les délices de ce plat typique.  <br />
-                Remy et Colette sont amoureux de la gastronomie française (on ne peut les blâmer !). Travaillant quotidiennement  <br />
-                avec les meilleurs produits du terroir, ils affectionnent particulièrement la bonne chaire et aiment partager leur passion.<br />
+                We are a recently start up founded by Remy and Colette Tatou, two famour restaurant. Our restaurant, based in  <br />
+                Montmartre (Paris), have a fifty place settings and does not empty out. Ratatouille attract us a international  <br />
+                customers charmed by the delights of this typical dish. Remy and Colette are in love of french gastronomy (we can't   <br />
+                judge them). Working daily with the bests local products, they are particularly fond of the good chair and like to share their passion.<br />
+
 
                 <img id="img_colette" src="{% static 'img/colette.png' %}"> <img id="img_remi" src="{% static 'img/remi.png' %}">
                 </p>
@@ -41,7 +41,7 @@
 
     <div class="row">
         <section id="contact" class="div_element">
-            <h3>Contactez-nous !</h3>
+            <h3>Contact us !</h3>
             <hr ><br/>
 
             <table class="table_foods">
@@ -76,5 +76,40 @@
         </section>
     </div>
 
+          <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+          <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+          <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+
+        <!--<script>-->
+          <!--$( function() {-->
+            <!--var availableTags = [-->
+              <!--"ActionScript",-->
+              <!--"AppleScript",-->
+              <!--"Asp",-->
+              <!--"BASIC",-->
+              <!--"C",-->
+              <!--"C++",-->
+              <!--"Clojure",-->
+              <!--"COBOL",-->
+              <!--"ColdFusion",-->
+              <!--"Erlang",-->
+              <!--"Fortran",-->
+              <!--"Groovy",-->
+              <!--"Haskell",-->
+              <!--"Java",-->
+              <!--"JavaScript",-->
+              <!--"Lisp",-->
+              <!--"Perl",-->
+              <!--"PHP",-->
+              <!--"Python",-->
+              <!--"Ruby",-->
+              <!--"Scala",-->
+              <!--"Scheme"-->
+            <!--];-->
+            <!--$( "#input_search_food" ).autocomplete({-->
+              <!--source: availableTags-->
+            <!--});-->
+          <!--} );-->
+        <!--</script>-->
 
 {% endblock %}
