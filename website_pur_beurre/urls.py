@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('home', views.home, name="home"),
+    path('', views.home, name="home"),
     # ------------------- database -------------------
     path('feed_database', views.feed_database, name="feed_database"),
     path('feed_database_heroku', views.feed_database_heroku, name="feed_database_heroku"),
