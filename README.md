@@ -1,4 +1,4 @@
-# GrandPy bot
+# Pur beurre
 ## Installation
 * Récupérer le projet via GitHub : En ligne de commande, dans le répertoire souhaité, lancer la commande : "clone https://github.com/msadour/pur_beurre.git"
 * Installer les dépendances : Une fois le projet récupéré, en ligne de commande, placer vous dans le dossier du projet et lancer la commande suivante : "pip install -r requirements.txt".
