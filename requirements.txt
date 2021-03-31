@@ -14,7 +14,7 @@ ed25519ll==0.6
 protobuf==3.6.0
 ipaddr==2.2.0
 keyring==13.2.1
-lxml==4.2.3
+lxml==4.6.3
 python_memcached==1.59
 ordereddict==1.1
 pyinotify==0.9.6
