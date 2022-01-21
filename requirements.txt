@@ -3,7 +3,7 @@ pytest==3.6.3
 django_heroku==0.3.1
 numpy==1.13.3
 Cython==0.28.4
-ipython==6.4.0
+ipython==7.16.3
 pyOpenSSL==18.0.0
 Pillow==5.2.0
 bpython==0.17.1
