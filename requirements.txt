@@ -1,7 +1,7 @@
 psycopg2==2.7.4
 pytest==3.6.3
 django_heroku==0.3.1
-numpy==1.13.3
+numpy==1.22.0
 Cython==0.28.4
 ipython==6.4.0
 pyOpenSSL==18.0.0
