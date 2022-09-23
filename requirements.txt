@@ -11,7 +11,7 @@ cryptography==2.3
 cx_Oracle==6.4.1
 docutils==0.14
 ed25519ll==0.6
-protobuf==3.6.0
+protobuf==3.18.3
 ipaddr==2.2.0
 keyring==13.2.1
 lxml==4.2.3
